@@ -23,7 +23,7 @@ class XynoxClient extends AkairoClient{
 
         // Handlers . . .
         this.commandHandler = new CommandHandler(this, {
-            prefix: 'x!',
+            prefix: 'dp!',
             blockBots: true,
             blockClient: true,
             allowMention: true,
