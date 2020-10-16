@@ -5,7 +5,7 @@ const moment = require('moment');
 class UserInfo extends Command {
     constructor() {
         super('userinfo', {
-            aliases: ['userinfo', 'ui', 'info', 'whois', 'profile'],
+            aliases: ['userinfo', 'ui', 'info', 'whois', 'profile', 'me'],
             channel: 'guild',
             category: 'Information',
             description: {
@@ -79,7 +79,7 @@ class UserInfo extends Command {
                 `**❯ Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
                 `**❯ Hoist Role:** ${member.roles.hoist ? member.roles.hoist.name : 'None'}`,
                 `**❯ Server Join Date:** ${moment(member.joinedAt).format('LL LTS')}`,
-                `**❯ Roles [${roles.length}]:** ${roles.length < 10 ? roles.join(', ') : roles.length > 10 ? this.client.utils.trimArray(roles) : 'None'}`,
+                `**❯ Roles [${roles.length}]:** ${roles.slice(0, 10).join(', ') || 'None'}`,
                 `\u200b`
             ])
             .setFooter(`Thanks for using ${this.client.user.username}`)

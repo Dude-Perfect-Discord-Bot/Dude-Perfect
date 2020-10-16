@@ -13,7 +13,7 @@ class HelpCommand extends Command {
                     default: null
                 }
             ],
-            category: 'Information',
+            category: 'Utilities',
             description: {
                 content: 'Displays information about a command',
                 usage: '[command]',
@@ -52,7 +52,8 @@ class HelpCommand extends Command {
             }
         } else {
             embed
-                .setTitle('❯ Help Interface')
+                .setTitle('Help Interface')
+                .setThumbnail(this.client.user.displayAvatarURL())
                 .setDescription(
                     stripIndents`
                     These are the commands which are executable in the **${this.client.user.username}**.
@@ -61,7 +62,7 @@ class HelpCommand extends Command {
 					`
                 )
                 .setFooter(
-                    `${this.client.user.username} is made with ❤️ by <@!${this.client.ownerID}>.`,
+                    `${this.client.user.username} is made with ❤️`,
                     this.client.user.displayAvatarURL()
                 );
 
@@ -73,8 +74,12 @@ class HelpCommand extends Command {
                         .filter((cmd) => cmd.aliases.length > 0)
                         .map((cmd) => `\`${cmd.aliases[0]}\``)
                         .join(', ')}`
-                );
+                );    
             }
+            embed.addField(`❯ Check Out`, [
+                ` [**Support**](https://discord.gg/ZzbZpdw) • [**Invite**](https://discord.com/api/oauth2/authorize?client_id=759763855680602122&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FZzbZpdw&scope=bot) • [**GitHub**](https://github.com/Dude-Perfect-Discord-Bot)`
+            ]);
+
         }
 
         return message.util.send(embed);
