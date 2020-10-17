@@ -10,7 +10,7 @@ class GuildInfo extends Command {
             category: 'Information',
             description: {
                 content: 'Displays information about the server.',
-                usage: '[command]'
+                usage: 'Xynox#0117'
             },
             typing: true
         });

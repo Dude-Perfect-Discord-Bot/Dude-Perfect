@@ -10,8 +10,7 @@ class UserInfo extends Command {
             category: 'Information',
             description: {
                 content: 'Displays information about a provided user or the command executor.',
-                usage: '[command]',
-                examples: ['Xynox#0117']
+                usage: 'Xynox#0117'
             },
             args: [
                 {
