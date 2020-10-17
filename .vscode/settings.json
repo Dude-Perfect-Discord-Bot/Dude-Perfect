@@ -1,0 +1,6 @@
+{
+    "discord.detailsEditing": "Editing {filename}",
+    "discord.lowerDetailsEditing": "At: {currentline}:{currentcolumn}/{totallines} | Filesize: {filesize}",
+    "discord.smallImage": "VSCode",
+    "discord.workspaceElapsedTime": true
+}
