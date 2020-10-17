@@ -1,6 +1,6 @@
 const { Command } = require('discord-akairo');
 
-class Guild extends Command {
+class Guilds extends Command {
     constructor() {
         super('guilds', {
             aliases: ['guilds', 'botguild'],
@@ -19,6 +19,6 @@ class Guild extends Command {
             message.delete();
     }
 }
-module.exports = Guild;
+module.exports = Guilds;
 
 
