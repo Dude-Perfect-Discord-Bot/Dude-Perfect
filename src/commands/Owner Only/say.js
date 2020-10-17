@@ -4,7 +4,7 @@ class SayMessage extends Command {
     constructor() {
         super('say', {
             aliases: ['say', 'speak'],
-            category: 'Owner Only',
+            category: 'Bot Owner Only',
             ownerOnly: true,
             typing: true,
             args: [
