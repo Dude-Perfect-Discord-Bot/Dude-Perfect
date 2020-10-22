@@ -6,6 +6,7 @@ class Welcome extends Command {
         super('wlc', {
             aliases: ['wlc', 'greet'],
             channel: 'guild',
+            category: 'Bot Owner Only',
             ownerOnly: true
         });
     }

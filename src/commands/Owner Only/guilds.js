@@ -5,6 +5,7 @@ class Guilds extends Command {
         super('guilds', {
             aliases: ['guilds', 'botguild'],
             channel: 'guild',
+            category: 'Bot Owner Only',
             ownerOnly: true
             });
     }
