@@ -1,5 +1,5 @@
-const { Command, version: akairoVersion } = require('discord-akairo'); 
-const { Message, MessageEmbed, version: djsVersion } = require('discord.js');
+const { Command, version: vakairo } = require('discord-akairo'); 
+const { Message, MessageEmbed, version: djs } = require('discord.js');
 const { version } = require('../../../package.json');
 const { utc } = require('moment');
 const ms = require('ms');
@@ -19,20 +19,19 @@ class About extends Command {
 
     async exec(message) {
         
-        const owner = this.client.users.cache.get(this.client.ownerID);
         const embed = new MessageEmbed()
             .setThumbnail(this.client.user.displayAvatarURL())
             .setColor('#00ff9e')
             .setTitle(`About ${this.client.user.username}`)
             .setImage(`https://cdn.discordapp.com/attachments/748808131865215004/764348102592430091/HeavyLikableFurseal-size_restricted.gif`)
             .setDescription(
-                `**${this.client.user.username} is made with ❤️.**
-                **${this.client.user.username}** is bot that can do most of things that everything you require for making a better and better Discord Server.
+                `**${this.client.user.username} is made with ❤️**
+                **${this.client.user.username}** is a bot that can do most of the things that everything you require for making a better and better Discord Server..
                 `)
             .addField('__General__', [
                 `**❯ Client:** ${this.client.user.tag} (\`${this.client.user.id}\`)`,
                 `**❯ Creation Date:** ${utc(this.client.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
-                `**❯ Devs:** Anish, Hound, Kartik, Piyush  Xynox.`,
+                `**❯ Devs:** Anish, Hound, Kartik, Piyush & Xynox.`,
                 '\u200b'
             ])
             .addField('__Frontend Details__', [
@@ -42,10 +41,10 @@ class About extends Command {
                 '\u200b'
             ])
             .addField(`__Backend Details__`, [
-                `**❯ Version:** v${version}`,
-                `**❯ Node.js:** ${process.version}`,
-                `**❯ Discord.js:** v12.3.1`,
-                `**❯ Discord-Akairo:** v8.1.0`,
+                `**❯ Version:** [v${version}](https://github.com/Dude-Perfect-Discord-Bot)`,
+                `**❯ Node.js:** [${process.version}](https://nodejs.org/en/)`,
+                `**❯ Discord.js:** [v${djs}](https://discord.js.org/#/docs)`,
+                `**❯ Discord-Akairo:** [v${vakairo}](https://discord-akairo.github.io/#/docs)`,
                 `**❯ Modules:** Total ${this.handler.modules.size} modules`,
                 '\u200b'
             ])

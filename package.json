@@ -1,6 +1,6 @@
 {
   "name": "dude-perfect",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "This is the alpha testing version of dude perfect discord bot on akairo handler.",
   "main": "src/index.js",
   "scripts": {
@@ -9,14 +9,18 @@
   "author": "Xynox",
   "license": "ISC",
   "dependencies": {
+    "canvas": "^2.6.1",
+    "canvas-constructor": "^4.1.0",
     "common-tags": "^1.8.0",
     "discord-akairo": "^8.1.0",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
+    "got": "^11.8.0",
     "moment": "^2.29.1",
     "mongoose": "^5.10.7",
     "ms": "^2.1.2",
     "os": "^0.1.1",
+    "superagent": "^6.1.0",
     "util": "^0.12.3"
   }
 }

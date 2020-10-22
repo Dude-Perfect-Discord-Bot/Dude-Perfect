@@ -9,8 +9,7 @@ class GuildInfo extends Command {
             channel: 'guild',
             category: 'Information',
             description: {
-                content: 'Displays information about the server.',
-                usage: 'Xynox#0117'
+                content: 'Displays information about the server.'
             },
             typing: true
         });

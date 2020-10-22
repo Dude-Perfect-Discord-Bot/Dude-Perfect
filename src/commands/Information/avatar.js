@@ -9,7 +9,7 @@ class Avatar extends Command {
             category: 'Information',
             description: {
                 content: 'Displays avatar of provided user or the command executor.',
-                usage: '[command]',
+                usage: '[user]',
                 examples: ['Xynox#0117']
             },
             args: [

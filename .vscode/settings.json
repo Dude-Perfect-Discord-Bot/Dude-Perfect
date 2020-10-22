@@ -1,6 +1,8 @@
 {
-    "discord.detailsEditing": "Editing {filename} | Workspace: {workspace}",
+    "discord.detailsEditing": "Editing {filename}",
     "discord.lowerDetailsEditing": "At: {currentline}:{currentcolumn}/{totallines} | Filesize: {filesize}",
+    "discord.detailsIdle": "Lurking Right Now!",
+    "discord.lowerDetailsIdle": "Akairo iz ❤️",
     "discord.smallImage": "VSCode",
     "discord.workspaceElapsedTime": true
 }

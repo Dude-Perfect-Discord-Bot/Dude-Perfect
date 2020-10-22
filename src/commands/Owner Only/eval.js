@@ -5,7 +5,6 @@ class EvalCommand extends Command {
     constructor() {
         super('eval', {
             aliases: ['eval', 'e'],
-            category: 'Bot Owner Only',
             ownerOnly: true,
             typing: true,
             quoted: false,

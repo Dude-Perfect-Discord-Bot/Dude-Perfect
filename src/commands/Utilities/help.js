@@ -17,7 +17,7 @@ class HelpCommand extends Command {
             description: {
                 content: 'Displays information about a command',
                 usage: '[command]',
-                examples: ['[command name]']
+                examples: ['userinfo']  
             }
         });
     }
