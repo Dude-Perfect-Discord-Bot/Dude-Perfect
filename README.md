@@ -51,4 +51,3 @@ I wouldn't recommend it. Self-hosting this bot (running a copy yourself) is not 
 
 ## Contributing
 Contributions to Dude Perfect are always appreciated, whether it be improvements to the documentation or new features, please feel free to make the change. Contact to our developers on  [**Discord**](https://discord.gg/ZzbZpdw) before you get started.
-
