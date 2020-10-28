@@ -1,5 +1,4 @@
-<!-- 
-Copyright 2019 Arindam Hazra aka Xynox < https://arindamz.github.io/>
+<!--Copyright 2019 Arindam Hazra aka Xynox <https://arindamz.github.io/>
 
 Licensed under the Apache License, Version 2.0(the "License");
 you may not use this file except in compliance with the License.
@@ -11,15 +10,16 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.
--->
+limitations under the License.-->
 
 <!-- Dude Perfect Banner-->
 <div>
   <div style="margin-left:auto;margin-right:auto;">
 <p align="center" style="margin:0;">
-    <img src="https://cdn.discordapp.com/attachments/748774519707009055/770662369109213244/PicsArt_10-27-08.26.56.png"><br><br>
-</p>
+    <img src="https://cdn.discordapp.com/attachments/748774519707009055/770662369109213244/PicsArt_10-27-08.26.56.png"><br><br> </p> 
+
+**Dude Perfect is made with ❤️ \
+Dude Perfect is a bot that can do most of the things that everything you require for making a better and better Discord Server.**
 
 [![Status](https://top.gg/api/widget/status/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122) [![Servers](https://top.gg/api/widget/servers/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122) [![Upvotes](https://top.gg/api/widget/upvotes/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122)
 
@@ -31,10 +31,6 @@ limitations under the License.
 
 <!-- Repo stats-->
 [![GitHub license](https://img.shields.io/github/license/Dude-Perfect-Discord-Bot/Dude-Perfect.svg)](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/blob/main/LICENSE) <a href ="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src="https://img.shields.io/github/languages/top/Dude-Perfect-Discord-Bot/Dude-Perfect.svg?noavatar=true?style=plastic&maxAge=300"> <a href="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src="https://img.shields.io/github/issues-pr/Dude-Perfect-Discord-Bot/Dude-Perfect.svg?noavatar=true?style=plastic&maxAge=300"></a>
-
-## Dude Perfect Discord Bot
-Dude Perfect is made with ❤️ \
-Dude Perfect is a bot that can do most of the things that everything you require for making a better and better Discord Server.
 
 ## Developers 
 - [Anish Shobith](https://github.com/Anish-Shobith)
