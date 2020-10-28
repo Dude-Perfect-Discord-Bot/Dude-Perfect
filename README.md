@@ -14,13 +14,14 @@ Dude Perfect is a bot that can do most of the things that everything you require
 -->
 
 <!-- Code stats p1-->
-[![Discord](https://discord.com/api/guilds/748808130946793483/embed.png)](https://discord.gg/) <a href ="https://github.com/https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src = "https://img.shields.io/badge/Dude Perfect Version-V 2.1.4-orange.svg?noavatar=true?style=plastic&maxAge=300"> [![CodeFactor](https://www.codefactor.io/repository/github/dude-perfect-discord-bot/dude-perfect/badge?s=689925b831cd5deff1e28b8bced1dab3645820e8)](https://www.codefactor.io/repository/github/dude-perfect-discord-bot/dude-perfect)
+[![Discord](https://discord.com/api/guilds/748808130946793483/embed.png)](https://discord.gg/) <a href ="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src = "https://img.shields.io/badge/Dude Perfect Version-V 2.1.4-orange.svg?noavatar=true?style=plastic&maxAge=300"> [![CodeFactor](https://www.codefactor.io/repository/github/dude-perfect-discord-bot/dude-perfect/badge?s=689925b831cd5deff1e28b8bced1dab3645820e8)](https://www.codefactor.io/repository/github/dude-perfect-discord-bot/dude-perfect)
 
 <!-- Code stats p2-->
-<a href ="http://discord.js.org"><img src = "https://img.shields.io/badge/Discord.js-Version--Stable-blue.svg?noavatar=true?style=plastic&maxAge=300"> <a href ="https://discord-akairo.github.io/"><img src = "https://img.shields.io/badge/Discordakairo-Version--Stable-blue.svg?noavatar=true?style=plastic&maxAge=300">
+<a href ="http://discord.js.org"><img src = "https://img.shields.io/badge/Discord.js-Version--Stable-blue.svg?noavatar=true?style=plastic&maxAge=300"> <a href ="https://discord-akairo.github.io/"><img src = "https://img.shields.io/badge/Discordakairo-Version--Stable-blue.svg?noavatar=true?style=plastic&maxAge=300"> 
 
 <!-- Repo stats--> 
-[![GitHub license](https://img.shields.io/github/license/Dude-Perfect-Discord-Bot/Dude-Perfect.svg)](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/blob/main/LICENSE) <a href ="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src="https://img.shields.io/github/languages/top/Dude-Perfect-Discord-Bot/Dude-Perfect.svg?noavatar=true?style=plastic&maxAge=300"> <a href="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src="https://img.shields.io/github/issues-pr/Dude-Perfect-Discord-Bot/Dude-Perfect.svg?noavatar=true?style=plastic&maxAge=300"></a>
+[![GitHub license](https://img.shields.io/github/license/Dude-Perfect-Discord-Bot/Dude-Perfect.svg)](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/blob/main/LICENSE) <a href ="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src="https://img.shields.io/github/languages/top/Dude-Perfect-Discord-Bot/Dude-Perfect.svg?noavatar=true?style=plastic&maxAge=300"> <a href="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src="https://img.shields.io/github/issues-pr/Dude-Perfect-Discord-Bot/Dude-Perfect.svg?noavatar=true?style=plastic&maxAge=300"></a> <a href="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/issues"> <img src="https://img.shields.io/github/issues/Dude-Perfect-Discord-Bot/Dude-Perfect?noavatar=true?style=plastic&maxAge=300" alt="Issues">
+</a>
 
 <br>
 <br>
