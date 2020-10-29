@@ -13,7 +13,6 @@
 // limitations under the License.
 
 const { Command } = require('discord-akairo');
-const { MessageEmbed } = require('discord.js');
 const superagent = require('superagent');
 
 

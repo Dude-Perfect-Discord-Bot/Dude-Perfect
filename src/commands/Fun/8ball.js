@@ -14,7 +14,6 @@
 
 const { Command } = require('discord-akairo');
 const { MessageEmbed } = require('discord.js');
-const got = require('got');
 
 
 class EightBall extends Command {
