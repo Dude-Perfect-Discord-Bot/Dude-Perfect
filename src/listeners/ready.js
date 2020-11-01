@@ -27,7 +27,7 @@ class Ready extends Listener {
         const activities = [
             `${this.client.guilds.cache.size} guilds!`,
             `Anish, Hound, Kartik, Piyush & Xynox!`,
-            `${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} users!`
+            `Team init._.iators!`
         ];
 
         let i = 0;
