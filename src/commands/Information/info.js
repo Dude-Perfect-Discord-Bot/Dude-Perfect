@@ -34,6 +34,7 @@ class UserInfo extends Command {
                     default: message => message.member
                 }
             ],
+            ratelimit: 2,
             typing: true
         });
     }
@@ -63,17 +64,17 @@ class UserInfo extends Command {
             .slice(0, -1);
         const userFlags = (member.user.flags ? member.user.flags.toArray() : []);
 
-        let status = ""
-        if (member.user.presence.clientStatus && member.user.presence.clientStatus.mobile) status = "Mobile"
-        if (member.user.presence.clientStatus && member.user.presence.clientStatus.desktop) status = "Desktop"
-        if (member.user.presence.clientStatus && member.user.presence.clientStatus.web) status = "Website"
-        if (member.user.presence.status === "offline") status = "The user is offline/invisible or there is some issue to track device."
+    //    let status = ""
+    //    if (member.user.presence.clientStatus && member.user.presence.clientStatus.mobile) status = "Mobile"
+    //    if (member.user.presence.clientStatus && member.user.presence.clientStatus.desktop) status = "Desktop"
+    //    if (member.user.presence.clientStatus && member.user.presence.clientStatus.web) status = "Website"
+    //    if (member.user.presence.status === "offline") status = "The user is offline/invisible or there is some issue to track device."
 
-        let emoji = ""
-        if (`${member.user.presence.status}` === "online") emoji = "<:OnlineStatus:753975990417358869>"
-        if (`${member.user.presence.status}` === "idle") emoji = "<:IdleStatus:753976530874400918>"
-        if (`${member.user.presence.status}` === "dnd") emoji = "<:status_dnd:753976689402445857>"
-        if (`${member.user.presence.status}` === "offline") emoji = "<:OfflineStatus:753976062232232096>"
+    //    let emoji = ""
+    //    if (`${member.user.presence.status}` === "online") emoji = "<:OnlineStatus:753975990417358869>"
+    //    if (`${member.user.presence.status}` === "idle") emoji = "<:IdleStatus:753976530874400918>"
+    //    if (`${member.user.presence.status}` === "dnd") emoji = "<:status_dnd:753976689402445857>"
+    //    if (`${member.user.presence.status}` === "offline") emoji = "<:OfflineStatus:753976062232232096>"
 
         const embed = new MessageEmbed()
             .setTitle(`${member.user.tag}`)
@@ -84,8 +85,8 @@ class UserInfo extends Command {
                 `**❯ Tag:** ${member.user.tag}`,
                 `**❯ ID:** ${member.id}`,
                 `**❯ Avatar:** [Link to avatar](${member.user.displayAvatarURL({ dynamic: true })})`,
-                `**❯ Device:** ${status} `,
-                `**❯ Status:** ${member.user.presence.status} (${emoji})`,
+        //        `**❯ Device:** ${status} `,
+        //        `**❯ Status:** ${member.user.presence.status} (${emoji})`,
                 `**❯ Time Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} (${moment(member.user.createdTimestamp).fromNow()})`,
                 `\u200b`
             ])

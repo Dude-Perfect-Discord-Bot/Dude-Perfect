@@ -24,7 +24,8 @@ class SayMessage extends Command {
             args: [
                 {
                     id: 'thing',
-                    type: 'string'
+                    type: 'string',
+                    match: 'content'
                 }
             ]
         });

@@ -33,6 +33,7 @@ class Avatar extends Command {
                     default: message => message.member
                 }
             ],
+            ratelimit: 2,
             typing: true
         })
     }

@@ -14,31 +14,23 @@
 
 const { Command } = require('discord-akairo');
 
-class CreateChannel extends Command {
+class Purge extends Command {
     constructor() {
-        super('createChannel', {
-            aliases: ['createChannel', 'create-channel', 'cch'],
+        super('purge', {
+            aliases: ['purge', 'prune'],
             channel: 'guild',
             category: 'Guild Management',
             description: {
-                content: 'Creates text/voice channel as per the arguments entered by the command executor.',
-                usage: '<channel type> <channel name>',
-                examples: ['text general-chat', 'voice General VC']
+                content: 'Deletes number of messages as per the arguments entered by the command executor.',
+                usage: '<number>',
+                examples: ['15']
             },
             args: [
                 {
-                    id: 'chtype',
+                    id: 'ch',
                     type: 'string',
                     prompt: {
-                        start: "<a:RedTick:760514410115498025> **You need to mention channel type ie. `text/voice`!**"
-                    },
-                },
-                {
-                    id: 'name',
-                    type: 'string',
-                    match: 'content',
-                    prompt: {
-                        start: "<a:RedTick:760514410115498025> **You need to mention channel name!**"
+                        start: "<a:RedTick:760514410115498025> **You need to mention channel id!**"
                     },
                 }
             ],
@@ -47,13 +39,15 @@ class CreateChannel extends Command {
         });
     }
 
-    async exec(message, { chtype, name }) {
+    async exec(message, { ch }) {
 
         if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_CHANNELS` permission to use this command!**");
 
         try {
-            await message.guild.channels.create(`${name}`, { type: `${chtype}` });
-            return message.channel.send(`<:check:753484699237613630> **${name}** has been successfully created by **${message.author.tag}**.`);
+            let channel = message.guild.channels.cache.get(`${ch}`)
+            channel.delete()
+
+            await message.channel.send(`<:check:753484699237613630> Channel has been successfully deleted by **${message.author.tag}**.`);
 
         } catch (err) {
             message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
@@ -63,4 +57,4 @@ class CreateChannel extends Command {
 
 }
 
-module.exports = CreateChannel;
+module.exports = Purge;
