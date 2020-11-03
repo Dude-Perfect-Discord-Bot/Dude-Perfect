@@ -21,7 +21,7 @@ class Purge extends Command {
             channel: 'guild',
             category: 'Guild Management',
             description: {
-                content: 'Deletes number of messages as per the arguments entered by the command executor.',
+                content: 'Deletes number of messages as per the arguments entered by the command executor. \n **Number of messaeges should be less than or equal to 100.**',
                 usage: '<number>',
                 examples: ['15']
             },
@@ -30,7 +30,7 @@ class Purge extends Command {
                     id: 'msg',
                     type: 'number',
                     prompt: {
-                        start: "<a:RedTick:760514410115498025> **You need to mention number of messages to be purge ie. it should be under 100!**"
+                        start: "<a:RedTick:760514410115498025> **You need to mention number of messages to be purge ie. it should be less than or equal to 100!**"
                     },
                 }
             ],
