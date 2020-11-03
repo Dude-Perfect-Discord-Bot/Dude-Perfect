@@ -27,10 +27,10 @@ class Purge extends Command {
             },
             args: [
                 {
-                    id: 'ch',
-                    type: 'string',
+                    id: 'msg',
+                    type: 'number',
                     prompt: {
-                        start: "<a:RedTick:760514410115498025> **You need to mention channel id!**"
+                        start: "<a:RedTick:760514410115498025> **You need to mention number of messages to be purge ie. it should be under 100!**"
                     },
                 }
             ],
@@ -39,15 +39,14 @@ class Purge extends Command {
         });
     }
 
-    async exec(message, { ch }) {
+    async exec(message, { msg }) {
 
-        if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_CHANNELS` permission to use this command!**");
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_MESSAGES` permission to use this command!**");
 
         try {
-            let channel = message.guild.channels.cache.get(`${ch}`)
-            channel.delete()
+            message.channel.bulkDelete(`${msg}`)
 
-            await message.channel.send(`<:check:753484699237613630> Channel has been successfully deleted by **${message.author.tag}**.`);
+            await message.channel.send(`<:check:753484699237613630> **${msg}** messages has been successfully purged by **${message.author.tag}**.`);
 
         } catch (err) {
             message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
