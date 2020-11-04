@@ -44,7 +44,7 @@ class Purge extends Command {
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_MESSAGES` permission to use this command!**");
 
         try {
-            message.channel.bulkDelete(`${msg}`)
+            message.channel.bulkDelete(`${msg}`+`1`)
 
             await message.channel.send(`<:check:753484699237613630> **${msg}** messages has been successfully purged by **${message.author.tag}**.`);
 

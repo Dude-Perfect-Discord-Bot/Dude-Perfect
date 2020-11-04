@@ -1,13 +1,11 @@
 {
   "name": "dude-perfect",
   "version": "2.1.4",
-  "description": "This is the alpha testing version of dude perfect discord bot on akairo handler.",
+  "description": "Dude Perfect is a bot that can do most of the things that everything you require for making a better and better Discord Server",
   "main": "src/index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "Xynox",
-  "license": "ISC",
+  "repository": "https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect.git",
+  "author": "workforxynox@gmail.com",
+  "license": "Apache2.0",
   "dependencies": {
     "canvas": "^2.6.1",
     "canvas-constructor": "^4.1.0",
