@@ -13,6 +13,7 @@
 // limitations under the License.
 
 const { Command } = require('discord-akairo');
+const pluralize = require('pluralize');
 
 class Purge extends Command {
     constructor() {
@@ -21,13 +22,14 @@ class Purge extends Command {
             channel: 'guild',
             category: 'Guild Management',
             description: {
-                content: 'Deletes number of messages as per the arguments entered by the command executor. \n **Number of messaeges should be less than or equal to 100.**',
+                content: 'Deletes number of messages as per the arguments entered by the command executor.',
                 usage: '<number>',
                 examples: ['15']
             },
+            cooldown: 5000,
             args: [
                 {
-                    id: 'msg',
+                    id: 'count',
                     type: 'number',
                     prompt: {
                         start: "<a:RedTick:760514410115498025> **You need to mention number of messages to be purge ie. it should be less than or equal to 100!**"
@@ -39,20 +41,28 @@ class Purge extends Command {
         });
     }
 
-    async exec(message, { msg }) {
+    async exec(message, args) {
 
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_MESSAGES` permission to use this command!**");
 
+        const count = args.count;
+        const messageCount = pluralize('message', count, true);
+
+        if (count > 100) {
+            return message.channel.send('<a:RedTick:760514410115498025> **You need to mention number of messages to be purge ie. it should be less than or equal to 100!**');
+        }
+        
         try {
-            message.channel.bulkDelete(`${msg}`+`1`)
-
-            await message.channel.send(`<:check:753484699237613630> **${msg}** messages has been successfully purged by **${message.author.tag}**.`);
-
+            await message.channel.bulkDelete(count + 1, true);
+            await message.channel.send(`Deleting ${messageCount}, please wait...`).then((msg) => {
+                msg.edit(`<:check:753484699237613630> **${messageCount}** has been successfully purged by **${message.author.tag}**.`);
+            });
         } catch (err) {
             message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
         }
-
+         
     }
 
 }
 
+module.exports = Purge;

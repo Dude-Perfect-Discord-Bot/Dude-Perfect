@@ -80,13 +80,13 @@ class GuildInfo extends Command {
                 `**❯ Time Created:** ${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} (${moment(message.guild.createdTimestamp).fromNow()})`,
                 '\u200b'
             ])
-        //    .addField('__Member Presence__', [
-        //        `**❯ Online:** ${members.filter(member => member.presence.status === 'online').size}`,
-        //        `**❯ Idle:** ${members.filter(member => member.presence.status === 'idle').size}`,
-        //        `**❯ Do Not Disturb:** ${members.filter(member => member.presence.status === 'dnd').size}`,
-        //        `**❯ Offline:** ${members.filter(member => member.presence.status === 'offline').size}`,
-        //        '\u200b'
-        //    ])
+            .addField('__Member Presence__', [
+                `**❯ Online:** ${members.filter(member => member.presence.status === 'online').size}`,
+                `**❯ Idle:** ${members.filter(member => member.presence.status === 'idle').size}`,
+                `**❯ Do Not Disturb:** ${members.filter(member => member.presence.status === 'dnd').size}`,
+                `**❯ Offline:** ${members.filter(member => member.presence.status === 'offline').size}`,
+                '\u200b'
+            ])
             .addField('__Server Statistics__', [
                 `**❯ Members:** ${message.guild.memberCount}`,
                 `**❯ Channels:** ${message.guild.channels.cache.size}`,
