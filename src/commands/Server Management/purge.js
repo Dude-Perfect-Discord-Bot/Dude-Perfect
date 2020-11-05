@@ -56,4 +56,3 @@ class Purge extends Command {
 
 }
 
-module.exports = Purge;
