@@ -41,18 +41,42 @@ class Purge extends Command {
 
     async exec(message, { msg }) {
 
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_MESSAGES` permission to use this command!**");
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("<a:RedTick:760514410115498025> You Don't Have Sufficient Permissions!- [MANAGE_MESSAGES]")
+        if (isNaN(msg))
+            return message.channel.send('**<a:RedTick:760514410115498025> Please Supply A Valid Amount To Delete Messages!**');
 
-        try {
-            message.channel.bulkDelete(`${msg}`+`1`)
+        if (msg > 100)
+            return message.channel.send("**<a:RedTick:760514410115498025> Please Supply A Number Less Than 100!**");
 
-            await message.channel.send(`<:check:753484699237613630> **${msg}** messages has been successfully purged by **${message.author.tag}**.`);
-
-        } catch (err) {
-            message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+        if (msg < 1)
+            return message.channel.send("**<a:RedTick:760514410115498025> Please Supply A Number More Than 1!**");
+    try{
+        message.channel.bulkDelete(msg)
+            .then(messages => message.channel.send(`**<:check:753484699237613630> Succesfully deleted \`${messages.size}/${msg}\` messages**`).then(message => message.delete({ timeout: 5000 }))).catch(() => null)
         }
+
+    catch(e) {
+        console.log(e)
+        message.channel.send(`<a:RedTick:760514410115498025> An error occured! Full error: \n\n` + "```js" + e + "```")
+    }
+
 
     }
 
 }
 
+
+/*
+Old Code Below :
+
+if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_MESSAGES` permission to use this command!**");
+
+try {
+    message.channel.bulkDelete(`${msg}`+`1`)
+
+    await message.channel.send(`<:check:753484699237613630> **${msg}** messages has been successfully purged by **${message.author.tag}**.`);
+
+} catch (err) {
+    message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+}
+*/
