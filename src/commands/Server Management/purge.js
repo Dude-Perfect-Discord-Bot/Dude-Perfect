@@ -51,7 +51,7 @@ class Purge extends Command {
         if (msg < 1)
             return message.channel.send("**<a:RedTick:760514410115498025> Please Supply A Number More Than 1!**");
     try{
-        message.channel.bulkDelete(msg)
+        message.channel.bulkDelete(`${msg}`)
             .then(messages => message.channel.send(`**<:check:753484699237613630> Succesfully deleted \`${messages.size}/${msg}\` messages**`).then(message => message.delete({ timeout: 5000 }))).catch(() => null)
         }
 
