@@ -93,7 +93,7 @@ class UserInfo extends Command {
             .addField('__Member Information__', [
                 `**❯ Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
                 `**❯ Hoist Role:** ${member.roles.hoist ? member.roles.hoist.name : 'None'}`,
-                `**❯ Server Join Date:** ${moment(member.joinedAt).format('LL LTS')}`,
+                `**❯ Joinned:** ${moment(member.joinedAt).format('LL LTS')}`,
                 `**❯ Roles [${roles.length}]:** ${roles.slice(0, 10).join(', ') || 'None'}`,
                 `\u200b`
             ])

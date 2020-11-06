@@ -40,7 +40,7 @@ class About extends Command {
             .setImage(`https://cdn.discordapp.com/attachments/748808131865215004/764348102592430091/HeavyLikableFurseal-size_restricted.gif`)
             .setDescription(
                 `**${this.client.user.username} is made with ❤️**
-                **${this.client.user.username}** is a bot that can do most of the things that everything you require for making a better and better Discord Server..
+                **${this.client.user.username}** is a bot that can do most of the things that everything you require for making a better and better Discord Server.
                 `)
             .addField('__General__', [
                 `**❯ Client:** ${this.client.user.tag} (\`${this.client.user.id}\`)`,
