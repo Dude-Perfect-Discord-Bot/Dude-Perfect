@@ -64,8 +64,6 @@ class UserInfo extends Command {
             .slice(0, -1);
         const userFlags = (member.user.flags ? member.user.flags.toArray() : []);
 
-        try {
-
         let status = ""
         if (member.user.presence.clientStatus && member.user.presence.clientStatus.mobile) status = "Mobile"
         if (member.user.presence.clientStatus && member.user.presence.clientStatus.desktop) status = "Desktop"
@@ -107,11 +105,6 @@ class UserInfo extends Command {
             .setFooter(`Thanks for using ${this.client.user.username}`)
             .setTimestamp();
         message.channel.send(embed);
-            console.log(member.user.presence.activities[0].type);
-        } catch (err) {
-            message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
-        }
-
     }
 }
 
