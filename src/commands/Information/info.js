@@ -64,6 +64,8 @@ class UserInfo extends Command {
             .slice(0, -1);
         const userFlags = (member.user.flags ? member.user.flags.toArray() : []);
 
+        try {
+
         let status = ""
         if (member.user.presence.clientStatus && member.user.presence.clientStatus.mobile) status = "Mobile"
         if (member.user.presence.clientStatus && member.user.presence.clientStatus.desktop) status = "Desktop"
@@ -76,6 +78,10 @@ class UserInfo extends Command {
         if (`${member.user.presence.status}` === "dnd") emoji = "<:status_dnd:753976689402445857>"
         if (`${member.user.presence.status}` === "offline") emoji = "<:OfflineStatus:753976062232232096>"
 
+        let game;
+        if (member.user.presence.activities.length >= 1) game = `${member.user.presence.activities[0].type} - ${member.user.presence.activities[0].name}`;
+        else if (member.user.presence.activities.length < 1) game = "Not playing a game"; 
+
         const embed = new MessageEmbed()
             .setTitle(`${member.user.tag}`)
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
@@ -87,6 +93,7 @@ class UserInfo extends Command {
                 `**❯ Avatar:** [Link to avatar](${member.user.displayAvatarURL({ dynamic: true })})`,
                 `**❯ Device:** ${status} `,
                 `**❯ Status:** ${member.user.presence.status} (${emoji})`,
+                `**❯ Game:** ${game}`,
                 `**❯ Time Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} (${moment(member.user.createdTimestamp).fromNow()})`,
                 `\u200b`
             ])
@@ -100,6 +107,10 @@ class UserInfo extends Command {
             .setFooter(`Thanks for using ${this.client.user.username}`)
             .setTimestamp();
         message.channel.send(embed);
+            console.log(member.user.presence.activities[0].type);
+        } catch (err) {
+            message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+        }
 
     }
 }
