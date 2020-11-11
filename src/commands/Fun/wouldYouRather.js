@@ -19,7 +19,7 @@ const { MessageEmbed } = require('discord.js');
 class WouldYouRather extends Command {
     constructor() {
         super('wouldYouRather', {
-            aliases: ['WouldYouRather', 'wyr'],
+            aliases: ['wouldYouRather', 'WouldYouRather', 'wyr'],
             channel: 'guild',
             category: 'Fun',
             description: {

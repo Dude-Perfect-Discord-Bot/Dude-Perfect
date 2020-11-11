@@ -47,7 +47,8 @@ class Meme extends Command {
             message.channel.send(embed)
 
 
-        }).catch(console.error);    }
+        }).catch(console.error);    
+    }
 
 }
 
