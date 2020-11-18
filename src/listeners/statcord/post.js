@@ -23,7 +23,7 @@ module.exports = class extends Listener {
     }
 
     exec(status) {
-        if (!!status) {
+        if (status !== false) {
             console.log(`An error occured while posting to statcord: ${status}`)
         }
     }
