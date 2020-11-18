@@ -57,6 +57,12 @@ class XynoxClient extends AkairoClient {
             directory: join(__dirname, "listeners")
         });
 
+        this.listenerHandler.setEmitters({
+            commandHandler: this.commandHandler,
+            listenerHandler: this.listenerHandler,
+            statCord: this.statCord
+        })
+
         this.commandHandler.useListenerHandler(this.listenerHandler);
         this.listenerHandler.loadAll();
         this.commandHandler.loadAll();
