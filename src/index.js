@@ -14,6 +14,7 @@
 
 const { log } = require('console');
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
+const { Client: StatcordClient } = require("statcord.js");
 
 const { config } = require('dotenv');
 const { join } = require('path');
@@ -23,7 +24,7 @@ config();
 const commandsPath = join(__dirname, '..', 'commands/');
 const listenersPath = join(__dirname, '..', 'listeners/');
 
-class XynoxClient extends AkairoClient{
+class XynoxClient extends AkairoClient {
     constructor() {
         super(
             {
@@ -33,6 +34,12 @@ class XynoxClient extends AkairoClient{
                 disableEveryone: true
             }
         );
+
+        // Statcord
+        this.statCord = new StatcordClient({
+            client: this,
+            key: process.env.STATCORD_KEY
+        })
 
         // Handlers . . .
         this.commandHandler = new CommandHandler(this, {
@@ -49,6 +56,12 @@ class XynoxClient extends AkairoClient{
         this.listenerHandler = new ListenerHandler(this, {
             directory: join(__dirname, "listeners")
         });
+
+        this.listenerHandler.setEmitters({
+            commandHandler: this.commandHandler,
+            listenerHandler: this.listenerHandler,
+            statCord: this.statCord
+        })
 
         this.commandHandler.useListenerHandler(this.listenerHandler);
         this.listenerHandler.loadAll();
