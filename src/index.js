@@ -38,7 +38,7 @@ class XynoxClient extends AkairoClient {
         // Statcord
         this.statCord = new StatcordClient({
             client: this,
-            key: process.env.STATCORD_TOKEN
+            key: process.env.STATCORD_KEY
         })
 
         // Handlers . . .
