@@ -13,6 +13,8 @@
 // limitations under the License.
 
 const { Listener } = require("discord-akairo")
+const figlet = require('util').promisify(require('figlet'));
+const { version } = require('../../package.json');
 
 class Ready extends Listener {
     constructor() {
@@ -22,7 +24,7 @@ class Ready extends Listener {
         });
     }
 
-    exec() {
+    async exec() {
 
         const activities = [
             `${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} users!`,
@@ -34,8 +36,7 @@ class Ready extends Listener {
         let i = 0;
         setInterval(() => this.client.user.setActivity(`dp!help | ${activities[i++ % activities.length]}`, { type: 'WATCHING' }), 15000);
 
-        console.log(`${this.client.user.tag} is online!`);
-
+        console.log(await figlet(`${this.client.user.username}`)); 
     }
 }
 
