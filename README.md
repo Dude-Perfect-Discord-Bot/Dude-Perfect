@@ -23,7 +23,7 @@ Dude Perfect is a bot that can do most of the things that everything you require
 
 <!-- Bot stats-->
 
-[![Status](https://top.gg/api/widget/status/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122) [![Servers](https://top.gg/api/widget/servers/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122) [![Upvotes](https://top.gg/api/widget/upvotes/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122) [![Library](https://top.gg/api/widget/lib/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122) [![Owner](https://top.gg/api/widget/owner/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122)
+[![Status](https://top.gg/api/widget/status/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122) [![Servers](https://top.gg/api/widget/servers/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122) [![Owner](https://top.gg/api/widget/owner/759763855680602122.svg?noavatar=true)](https://top.gg/bot/759763855680602122)
 
 <!-- Code stats p1-->
 [![Discord](https://discord.com/api/guilds/748808130946793483/embed.png)](https://discord.gg/ZzbZpdw) <a href ="https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect"><img src = "https://img.shields.io/badge/Dude Perfect Version-V 2.1.4-orange.svg?noavatar=true?style=plastic&maxAge=300"> [![CodeFactor](https://www.codefactor.io/repository/github/dude-perfect-discord-bot/dude-perfect/badge?s=689925b831cd5deff1e28b8bced1dab3645820e8)](https://www.codefactor.io/repository/github/dude-perfect-discord-bot/dude-perfect)
