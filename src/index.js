@@ -15,6 +15,7 @@
 const { log } = require('console');
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
 const { Client: StatcordClient } = require("statcord.js");
+const DBL = require("dblapi.js");
 
 const { config } = require('dotenv');
 const { join } = require('path');
@@ -35,11 +36,14 @@ class XynoxClient extends AkairoClient {
             }
         );
 
-        // Statcord
+        // Stats
         this.statCord = new StatcordClient({
             client: this,
             key: process.env.STATCORD_KEY
         })
+        this.dbl = new DBL(process.env.TOP_GG_TOKEN, {
+            statsInterval: 900000
+        }, this)
 
         // Handlers . . .
         this.commandHandler = new CommandHandler(this, {
@@ -60,7 +64,8 @@ class XynoxClient extends AkairoClient {
         this.listenerHandler.setEmitters({
             commandHandler: this.commandHandler,
             listenerHandler: this.listenerHandler,
-            statCord: this.statCord
+            statCord: this.statCord,
+            dbl: this.dbl
         })
 
         this.commandHandler.useListenerHandler(this.listenerHandler);
