@@ -41,7 +41,9 @@ class XynoxClient extends AkairoClient {
             client: this,
             key: process.env.STATCORD_KEY
         })
-        this.dbl = new DBL(process.env.TOP_GG_TOKEN, this)
+        this.dbl = new DBL(process.env.TOP_GG_TOKEN, {
+            statsInterval: 900000
+        }, this)
 
         // Handlers . . .
         this.commandHandler = new CommandHandler(this, {
