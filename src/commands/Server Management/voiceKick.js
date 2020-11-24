@@ -43,6 +43,8 @@ class VoiceKick extends Command {
 
         if (!message.member.hasPermission("MOVE_MEMBERS")) return message.reply("<a:RedTick:760514410115498025> **You need `MOVE_MEMBERS` permission to use this command!**");
         
+        if (!member.voice.channel) return message.reply("<a:RedTick:760514410115498025> **User needs to be in Voice channel to be disconnected.**");
+
         try {
         await member.voice.kick(member);
         return message.channel.send(`<:check:753484699237613630> **${member.user.tag}** has successfully disconnected by **${message.author.tag}**.`);
