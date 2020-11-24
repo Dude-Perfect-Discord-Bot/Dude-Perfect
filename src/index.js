@@ -47,7 +47,7 @@ class XynoxClient extends AkairoClient {
 
         // Handlers . . .
         this.commandHandler = new CommandHandler(this, {
-            prefix: 'dp!',
+            prefix: process.env.PREFIX,
             blockBots: true,
             blockClient: true,
             allowMention: true,
