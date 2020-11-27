@@ -13,7 +13,6 @@
 // limitations under the License.
 
 const { Command } = require('discord-akairo');
-const pluralize = require('pluralize');
 
 class Purge extends Command {
     constructor() {
@@ -30,9 +29,15 @@ class Purge extends Command {
             args: [
                 {
                     id: 'count',
-                    type: 'number',
+                    type: (_, phrase) => {
+                        if (!phrase || isNaN(parseInt(phrase))) return null;
+                        const num = parseInt(phrase);
+                        if (num < 2 || num > 100) return null;
+                        return num;
+                    },
                     prompt: {
-                        start: "<a:RedTick:760514410115498025> **You need to mention number of messages to be purge ie. it should be less than or equal to 100!**"
+                        start: (msg) => `${msg.author}, how man messages do you want to clean ? (2-100)`,
+                        retry: (msg) => `<a:RedTick:760514410115498025> ${msg.author}, please enter a number between 2 and 100!`,
                     },
                 }
             ],
@@ -41,25 +46,29 @@ class Purge extends Command {
         });
     }
 
-    async exec(message, args) {
+    async exec(message, { count }) {
 
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_MESSAGES` permission to use this command!**");
 
-        const count = args.count;
-        const messageCount = pluralize('message', count, true);
+        message.delete();
 
-        if (count > 100) {
-            return message.channel.send('<a:RedTick:760514410115498025> **You need to mention number of messages to be purge ie. it should be less than or equal to 100!**');
-        }
-        
-        try {
-            await message.channel.bulkDelete(count + 1, true);
-            await message.channel.send(`Deleting ${messageCount}, please wait...`).then((msg) => {
-                msg.edit(`<:check:753484699237613630> **${messageCount}** has been successfully purged by **${message.author.tag}**.`);
-            });
-        } catch (err) {
+        const messages = await message.channel.messages.fetch();
+        const filtered = messages
+        .filter(msg => msg.id !== message.id)
+        .sort((a, b) => b.createdTimestamp - a.createdTimestamp)
+        .array()
+        .slice(0, count);
+
+        message.channel.send(`Deleting ${filtered.length} messages, please wait...`).then(msg => {
+            message.channel.bulkDelete(filtered, true).then(({ size }) => {
+                msg.edit(`<:check:753484699237613630> **${size}** has been successfully purged by **${message.author.tag}**.`).then(m => {
+                    m.delete({ timeout: 5000 });
+                })
+            })
+        })
+        .catch(err => {
             message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
-        }
+        });
          
     }
 

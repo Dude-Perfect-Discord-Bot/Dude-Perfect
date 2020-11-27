@@ -32,9 +32,6 @@ class SayMessage extends Command {
     }
 
     async exec(message, { thing }) {
-        
-        if (message.author.id !== "594853883742912512") return message.reply("**Only `Bot Owner` can run this command.**");
-
         message.channel.send(thing);
         message.delete();
     }

@@ -30,30 +30,32 @@ class VoiceKick extends Command {
                     id: 'member',
                     type: 'member',
                     prompt: {
-                        start: "<a:RedTick:760514410115498025> **You need to mention user!**"
+                        start: (msg) => `${msg.author}, **Who do you want to voicekick?**`,
+                        retry: (msg) => `<a:RedTick:760514410115498025> ${msg.author}, please mention a member.`,
                     },
-                    default: message => message.member
+                },
+                {
+                    id: 'reason',
+                    type: 'string',
+                    match: 'rest'
                 }
             ],
             typing: true
         });
     }
 
-    async exec(message, { member } ) {
+    async exec(message, { member, reason  } ) {
 
         if (!message.member.hasPermission("MOVE_MEMBERS")) return message.reply("<a:RedTick:760514410115498025> **You need `MOVE_MEMBERS` permission to use this command!**");
         
         if (!member.voice.channel) return message.reply("<a:RedTick:760514410115498025> **User needs to connected in a voice channel to be disconnected.**");
 
-        try {
-        await member.voice.kick(member);
-        return message.channel.send(`<:check:753484699237613630> **${member.user.tag}** has successfully disconnected by **${message.author.tag}**.`);
-
-        } catch (err) 
-            { 
-                message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
-            }
-
+        member.voice.kick(reason).then(mem => {
+            message.channel.send(`<:check:753484699237613630> **${mem.user.tag}** has successfully disconnected by **${message.author.tag}**.`);
+        })
+        .catch(err => {
+            message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+        });
     }
 }
 

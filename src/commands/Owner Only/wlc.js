@@ -26,9 +26,6 @@ class Welcome extends Command {
     }
 
     async exec(message) {
-        
-        if (message.author.id !== "594853883742912512") return message.reply("**Only `Bot Owner` can run this command.**");
-
         const embed = new MessageEmbed()
             .setColor("5c00ff")
             .setTitle(`<a:wumpuswave:754062589746479227> ${message.guild.name} `)

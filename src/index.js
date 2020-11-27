@@ -51,6 +51,7 @@ class XynoxClient extends AkairoClient {
             blockBots: true,
             blockClient: true,
             allowMention: true,
+            handleEdits: true,
             defaultCooldown: 500,
             commandUtil: true,
             ignoreCooldown: ['259008949427109891', '430236084744749058', '371600898822111234', '365644930556755969'],

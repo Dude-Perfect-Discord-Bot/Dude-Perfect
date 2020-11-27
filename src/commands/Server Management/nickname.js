@@ -34,11 +34,8 @@ class Nickname extends Command {
                 },
                 {
                     id: "nick",
-                    type: "string",
+                    type: 'string',
                     match: "rest",
-                    prompt: {
-                        start: "<a:RedTick:760514410115498025> **You need to mention a nickname!**"
-                    }
 
 
                 },
@@ -50,15 +47,9 @@ class Nickname extends Command {
 
         if (!message.member.hasPermission("MANAGE_NICKNAMES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_NICKNAMES` permission to use this command!**");
 
-        try {
-
-            await member.setNickname(nick)
-        return message.channel.send(`<:check:753484699237613630> Nickname of the **${member.user.tag}** has been set as **${nick}**`);
-
-        } catch (err) 
-                {  
-                    message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
-                }
+        member.setNickname(nick || null).then(mem => {
+            message.channel.send(mem.nickname ? `Set nickname to ${mem.nickname}` : `Set back to username ${mem.user.username}`);
+        })
     }
 }
 module.exports = Nickname;

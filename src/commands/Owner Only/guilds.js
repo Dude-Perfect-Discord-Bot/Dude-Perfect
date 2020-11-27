@@ -25,14 +25,11 @@ class Guilds extends Command {
     }
 
     exec(message) {
-
-        if (message.author.id !== "594853883742912512") return message.reply("**Only `Bot Owner` can run this command.**");
-
         message.channel.send("** <a:star4:761157512614772736> __My Guilds__ **");
 
-        this.client.guilds.cache.forEach(x => message.channel.send(`<:check:753484699237613630> **${x.name}** - \`${x.id}\``))
-
-            message.delete();
+        const guild = this.client.guilds.cache.map(guild =>`<:check:753484699237613630> **${guild.name}** - \`${guild.id}\``);
+        message.channel.send(guild);
+        message.delete();
     }
 }
 module.exports = Guilds;
