@@ -61,7 +61,7 @@ class Purge extends Command {
 
         message.channel.send(`Deleting ${filtered.length} messages, please wait...`).then(msg => {
             message.channel.bulkDelete(filtered, true).then(({ size }) => {
-                msg.edit(`<:check:753484699237613630> **${size}** has been successfully purged by **${message.author.tag}**.`).then(m => {
+                msg.edit(`<:check:753484699237613630> **${size}** messages has been successfully purged by **${message.author.tag}**.`).then(m => {
                     m.delete({ timeout: 5000 });
                 })
             })
