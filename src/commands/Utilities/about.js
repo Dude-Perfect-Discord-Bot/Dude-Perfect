@@ -34,7 +34,7 @@ class About extends Command {
     async exec(message) {
         
         const embed = new MessageEmbed()
-            .setThumbnail(this.client.user.displayAvatarURL())
+            .setThumbnail(this.client.user.displayAvatarURL({ size: 4096, dynamic: true }))
             .setColor('#00ff9e')
             .setTitle(`About ${this.client.user.username}`)
             .setImage(`https://cdn.discordapp.com/attachments/748808131865215004/764348102592430091/HeavyLikableFurseal-size_restricted.gif`)
@@ -44,7 +44,8 @@ class About extends Command {
                 `)
             .addField('__General__', [
                 `**❯ Client:** ${this.client.user.tag} (\`${this.client.user.id}\`)`,
-                `**❯ Creation Date:** ${utc(this.client.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
+                `**❯ Created On:** ${utc(this.client.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
+                `**❯ Uptime:** ${ms(this.client.uptime, { long: true })}.`,
                 `**❯ Devs:** Anish, Hound, Kartik, Piyush & Xynox.`,
                 '\u200b'
             ])
@@ -53,7 +54,7 @@ class About extends Command {
                 `**❯ Channels:** ${this.client.channels.cache.size.toLocaleString()}`,
                 `**❯ Servers:** ${this.client.guilds.cache.size.toLocaleString()} `,
                 '\u200b'
-            ])
+            ], true)
             .addField(`__Backend Details__`, [
                 `**❯ Version:** [v${version}](https://github.com/Dude-Perfect-Discord-Bot)`,
                 `**❯ Node.js:** [${process.version}](https://nodejs.org/en/)`,
@@ -61,7 +62,7 @@ class About extends Command {
                 `**❯ Discord-Akairo:** [v${vakairo}](https://discord-akairo.github.io/#/docs)`,
                 `**❯ Modules:** Total ${this.handler.modules.size} modules`,
                 '\u200b'
-            ])
+            ], true)
             .addField('__Check Out__', [
                 ` [**Support**](https://discord.gg/ZzbZpdw) • [**Invite**](https://discord.com/api/oauth2/authorize?client_id=759763855680602122&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FZzbZpdw&scope=bot) • [**GitHub**](https://github.com/Dude-Perfect-Discord-Bot)`,
                 '\u200b'
