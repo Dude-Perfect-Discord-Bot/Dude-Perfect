@@ -36,7 +36,7 @@ class Purge extends Command {
                         return num;
                     },
                     prompt: {
-                        start: (msg) => `${msg.author}, how man messages do you want to clean ? (2-100)`,
+                        start: (msg) => `<a:RedTick:760514410115498025> ${msg.author}, how man messages do you want to clean ? (2-100)`,
                         retry: (msg) => `<a:RedTick:760514410115498025> ${msg.author}, please enter a number between 2 and 100!`,
                     },
                 }

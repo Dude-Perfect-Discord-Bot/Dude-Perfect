@@ -20,7 +20,6 @@ class EvalCommand extends Command {
         super('eval', {
             aliases: ['eval', 'e'],
             category: 'Bot Owner Only',
-            ownerOnly: true,
             typing: true,
             quoted: false,
             args: [
@@ -33,6 +32,9 @@ class EvalCommand extends Command {
     }
 
     async exec(message, { code }) {
+
+        if (message.author.id !== "594853883742912512") return message.reply("**Only `Bot Owner` can run this command.**");	
+        
         if (!code) return message.util.reply('No code provided!');
 
         const evaled = {};

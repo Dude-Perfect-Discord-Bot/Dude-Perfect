@@ -30,7 +30,7 @@ class VoiceKick extends Command {
                     id: 'member',
                     type: 'member',
                     prompt: {
-                        start: (msg) => `${msg.author}, **Who do you want to voicekick?**`,
+                        start: (msg) => `<a:RedTick:760514410115498025> ${msg.author}, **Who do you want to voicekick?**`,
                         retry: (msg) => `<a:RedTick:760514410115498025> ${msg.author}, please mention a member.`,
                     },
                 },
