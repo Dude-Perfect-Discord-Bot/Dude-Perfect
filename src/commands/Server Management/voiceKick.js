@@ -25,6 +25,8 @@ class VoiceKick extends Command {
                 usage: '<user>',
                 examples: ['Xynox#0117']
             },
+            clientPermissions: ['MOVE_MEMBERS'],
+            userPermissions: ['MOVE_MEMBERS'],
             args: [
                 {
                     id: 'member',
@@ -45,8 +47,6 @@ class VoiceKick extends Command {
     }
 
     async exec(message, { member, reason  } ) {
-
-        if (!message.member.hasPermission("MOVE_MEMBERS")) return message.reply("<a:RedTick:760514410115498025> **You need `MOVE_MEMBERS` permission to use this command!**");
         
         if (!member.voice.channel) return message.reply("<a:RedTick:760514410115498025> **User needs to connected in a voice channel to be disconnected.**");
 

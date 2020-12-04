@@ -20,6 +20,8 @@ class Slowmode extends Command {
             aliases: ['slowmodeset', 'sm'],
             channel: 'guild',
             category: 'Guild Management',
+            clientPermissions: ['MANAGE_CHANNELS'],
+            userPermissions: ['MANAGE_CHANNELS'],
             args: [
                 {
                     id: "time",
@@ -39,8 +41,6 @@ class Slowmode extends Command {
     }
 
     async exec(message, { time }) {
-
-        if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_CHANNELS` permission to use this command!**");
 
         try {
 

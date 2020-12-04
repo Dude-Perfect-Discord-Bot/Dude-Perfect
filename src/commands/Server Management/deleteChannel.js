@@ -25,6 +25,8 @@ class DeleteChannel extends Command {
                 usage: '<channel-id>',
                 examples: ['000000(general-chat)']
             },
+            clientPermissions: ['MANAGE_CHANNELS'],
+            userPermissions: ['MANAGE_CHANNELS'],
             args: [
                 {
                     id: 'ch',
@@ -40,8 +42,6 @@ class DeleteChannel extends Command {
     }
 
     async exec(message, { ch }) {
-
-        if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_CHANNELS` permission to use this command!**");
 
         try {
             let channel = message.guild.channels.cache.get(`${ch}`)
