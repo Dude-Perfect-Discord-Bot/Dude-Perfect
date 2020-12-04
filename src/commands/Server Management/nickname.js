@@ -24,6 +24,8 @@ class Nickname extends Command {
                 usage: '<user> <nickname>',
                 examples: ['Xynox#0117 <nickname>']
             },
+            userPermissions: ['MANAGE_NICKNAMES'],
+            clientPermissions: ['MANAGE_NICKNAMES'],
             args: [
                 {
                     id: "member",
@@ -44,8 +46,6 @@ class Nickname extends Command {
         });
     }
     async exec(message, { member, nick }) {
-
-        if (!message.member.hasPermission("MANAGE_NICKNAMES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_NICKNAMES` permission to use this command!**");
 
         member.setNickname(nick || null).then(mem => {
             message.channel.send(mem.nickname ? `<:check:753484699237613630> Set nickname to **${mem.nickname}**` : `<:check:753484699237613630> Set back to username **${mem.user.username}**`);

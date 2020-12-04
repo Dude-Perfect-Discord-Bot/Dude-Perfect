@@ -25,6 +25,8 @@ class CreateChannel extends Command {
                 usage: '<channel type> <channel name>',
                 examples: ['text general-chat', 'voice General VC']
             },
+            userPermissions: ['MANAGE_CHANNELS'],
+            clientPermissions: ['MANAGE_CHANNELS'],
             args: [
                 {
                     id: 'chtype',
@@ -48,8 +50,6 @@ class CreateChannel extends Command {
     }
 
     async exec(message, { chtype, name }) {
-
-        if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_CHANNELS` permission to use this command!**");
 
         try {
             await message.guild.channels.create(`${name}`, { type: `${chtype}` });

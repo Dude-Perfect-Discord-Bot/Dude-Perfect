@@ -26,6 +26,8 @@ class Purge extends Command {
                 examples: ['15']
             },
             cooldown: 5000,
+            userPermissions: ['MANAGE_MESSAGES'],
+            clientPermissions: ['MANAGE_MESSAGES'],
             args: [
                 {
                     id: 'count',
@@ -47,8 +49,6 @@ class Purge extends Command {
     }
 
     async exec(message, { count }) {
-
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("<a:RedTick:760514410115498025> **You need `MANAGE_MESSAGES` permission to use this command!**");
 
         message.delete();
 
