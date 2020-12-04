@@ -89,15 +89,15 @@ class UserInfo extends Command {
                 `**❯ Tag:** ${member.user.tag}`,
                 `**❯ ID:** ${member.id}`,
                 `**❯ Avatar:** [Link to avatar](${member.user.displayAvatarURL({ dynamic: true })})`,
-                `**❯ Device:** ${status} `,
-                `**❯ Status:** ${member.user.presence.status} (${emoji})`,
+             //   `**❯ Device:** ${status} `,
+             //   `**❯ Status:** ${member.user.presence.status} (${emoji})`,
              //   `**❯ Game:** ${game}`,
                 `**❯ Time Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} (${moment(member.user.createdTimestamp).fromNow()})`,
                 `\u200b`
             ])
             .addField('__Member Information__', [
                 `**❯ Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
-                `**❯ Hoist Role:** ${member.roles.hoist ? member.roles.hoist.name : 'None'}`,
+                `**❯ Display Role:** ${member.roles.hoist ? member.roles.hoist.name : 'None'}`,
                 `**❯ Joinned:** ${moment(member.joinedAt).format('LL LTS')}`,
                 `**❯ Roles [${roles.length}]:** ${roles.slice(0, 10).join(', ') || 'None'}`,
                 `\u200b`
