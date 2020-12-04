@@ -13,6 +13,7 @@
 // limitations under the License.
 
 const { Command } = require("discord-akairo");
+const { Role: { comparePositions } } = require('discord.js');
 
 class Nickname extends Command {
     constructor() {
@@ -46,6 +47,10 @@ class Nickname extends Command {
         });
     }
     async exec(message, { member, nick }) {
+
+        if (comparePositions(message.guild.me.roles.highest, member.roles.highest) <= 0) {
+            return message.reply(`<a:RedTick:760514410115498025> **Your role is above my role so i can't change your nickname.**`);
+        }
 
         member.setNickname(nick || null).then(mem => {
             message.channel.send(mem.nickname ? `<:check:753484699237613630> Set nickname to **${mem.nickname}**` : `<:check:753484699237613630> Set back to username **${mem.user.username}**`);
