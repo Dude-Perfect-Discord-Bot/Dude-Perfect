@@ -54,10 +54,10 @@ class Purge extends Command {
 
         const messages = await message.channel.messages.fetch();
         const filtered = messages
-        .filter(msg => msg.id !== message.id)
-        .sort((a, b) => b.createdTimestamp - a.createdTimestamp)
-        .array()
-        .slice(0, count);
+            .filter(msg => msg.id !== message.id)
+            .sort((a, b) => b.createdTimestamp - a.createdTimestamp)
+            .array()
+            .slice(0, count);
 
         message.channel.send(`Deleting ${filtered.length} messages, please wait...`).then(msg => {
             message.channel.bulkDelete(filtered, true).then(({ size }) => {
@@ -66,10 +66,10 @@ class Purge extends Command {
                 })
             })
         })
-        .catch(err => {
-            message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
-        });
-         
+            .catch(err => {
+                message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+            });
+
     }
 
 }
