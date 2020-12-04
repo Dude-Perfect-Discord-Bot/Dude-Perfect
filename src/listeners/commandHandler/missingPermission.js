@@ -12,11 +12,11 @@ module.exports = class extends Listener {
 		const text = {
 			client: () => {
 				const str = this.missingPermissions(message.channel, message.guild.me, missing);
-				return `<a:RedTick:760514410115498025> I'm missing ${str} to use that command.`;
+				return `<a:RedTick:760514410115498025> **I'm missing ${str} to use that command.**`;
 			},
 			user: () => {
 				const str = this.missingPermissions(message.channel, message.member, missing);
-				return `<a:RedTick:760514410115498025> You are missing ${str} to use that command.`;
+				return `<a:RedTick:760514410115498025> **You are missing ${str} to use that command.**`;
 			}
         }[type];
 
@@ -28,7 +28,7 @@ module.exports = class extends Listener {
 
     missingPermissions(channel, member, permissions) {
         const missingPerms = channel.permissionsFor(member).missing(permissions)
-        .map(str => str.toLowerCase().replace(/(^|"|_)(\S)/g, (s) => s.toUpperCase()).replace(/_/g, ' ').replace(/Guild/g, 'Server').replace(/Use Vad/g, 'Use Voice Acitvity'));
+        .map(str => `\`${str.toLowerCase().replace(/(^|"|_)(\S)/g, (s) => s.toUpperCase()).replace(/_/g, ' ').replace(/Guild/g, 'Server').replace(/Use Vad/g, 'Use Voice Acitvity')}\``);
         return missingPerms.length > 1
 			? `${missingPerms.slice(0, -1).join(', ')} and ${missingPerms.slice(-1)[0]}`
 			: missingPerms[0];
