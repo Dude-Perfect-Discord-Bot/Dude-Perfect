@@ -80,7 +80,7 @@ class HelpCommand extends Command {
                     this.client.user.displayAvatarURL()
                 );
 
-            for (const category of this.handler.categories.values()) {
+            for (const category of this.handler.categories.filter((categ) => categ.id != 'Bot Owner Only').values()) {//filter will hide owner commands from all users
                 embed.addField(
                     `❯ ${category.id.replace(/(\b\w)/gi, (lc) =>
                         lc.toUpperCase())} - ${category.size}`,
