@@ -15,7 +15,12 @@
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "figlet": "^1.5.0",
+<<<<<<< Updated upstream
     "got": "^11.8.1",
+=======
+    "fuse-djs": "Anish-Shobith/fuse-djs#build",
+    "got": "^11.8.0",
+>>>>>>> Stashed changes
     "moment": "^2.29.1",
     "mongoose": "^5.11.8",
     "ms": "^2.1.3",

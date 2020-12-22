@@ -75,5 +75,6 @@ class XynoxClient extends AkairoClient {
     }
 }
 
+        // Client Login . . .
 const client = new XynoxClient();
 client.login(process.env.TOKEN);
