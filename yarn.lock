@@ -458,8 +458,9 @@ function-bind@^1.1.1:
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
 fuse-djs@Anish-Shobith/fuse-djs#build:
-  version "1.2.0"
-  resolved "https://codeload.github.com/Anish-Shobith/fuse-djs/tar.gz/bd28a70c9e054bf0521284d4735dd3b7a5f0f5ee"
+  version "2.1.1"
+  uid "3c9278aeb34b1b6283f245cbb378be541c095001"
+  resolved "https://codeload.github.com/Anish-Shobith/fuse-djs/tar.gz/3c9278aeb34b1b6283f245cbb378be541c095001"
   dependencies:
     "@discordjs/collection" "^0.1.6"
     fuse.js "^6.4.3"
