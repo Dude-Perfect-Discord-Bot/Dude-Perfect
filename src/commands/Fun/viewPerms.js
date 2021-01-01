@@ -16,7 +16,7 @@ const { Command } = require('discord-akairo');
 const { MessageEmbed } = require('discord.js');
 
 
-class ViewPerm extends Command {
+module.exports = class ViewPerm extends Command {
     constructor() {
         super('viewPerm', {
             aliases: ['perms','permissions'],
@@ -45,7 +45,7 @@ class ViewPerm extends Command {
             .setTitle(`${member.user.tag}`)
             .setThumbnail(message.guild.iconURL({ dynamic: true }))
             .setColor('#00ff9e')
-            .setDescription(`You have this permissions...${permissions.join(' | ')}`)
+            .setDescription(`You have these permissions...${permissions.join(' | ')}`)
             .setFooter(`Thanks for using ${this.client.user.username}`)
             .setTimestamp();
         message.channel.send(embed);

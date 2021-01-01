@@ -32,7 +32,7 @@ class Slowmode extends Command {
                 },
             ],
             description: {
-                content: 'Sets the provide nickname of the user provided by the executor.',
+                content: 'Sets the slowmode in channel.',
                 usage: '<time>',
                 examples: ['5']
             },
