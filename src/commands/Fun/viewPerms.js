@@ -19,7 +19,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = class ViewPerm extends Command {
     constructor() {
         super('viewPerm', {
-            aliases: ['viewperm', 'myperm', 'perm'],
+            aliases: ['perms','permissions'],
             channel: 'guild',
             category: 'Fun',
             description: {
@@ -62,3 +62,5 @@ module.exports = class ViewPerm extends Command {
       }
 
 }
+
+module.exports = ViewPerm;
