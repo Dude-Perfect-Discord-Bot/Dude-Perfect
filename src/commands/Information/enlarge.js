@@ -43,13 +43,7 @@ class Enlarge extends Command {
 
     exec(message, { emoji }) {
         emoji.fetchAuthor().then(() => {
-            const embed = new MessageEmbed({
-                color: `#00ff9e`,
-                image: {
-                    url: emoji.url
-                },
-            });
-            message.channel.send(embed);
+            message.channel.send(`${emoji.url}`);
         });
     }
 }
