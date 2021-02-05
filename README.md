@@ -50,5 +50,5 @@ I wouldn't recommend it. Self-hosting this bot (running a copy yourself) is not 
 Contributions to Dude Perfect are always appreciated, whether it be improvements to the documentation or new features, please feel free to make the change. Contact our developers on  [**Discord**](https://discord.gg/ZzbZpdw) if required.
 
 ## Developers 
-• [**Anish Shobith**](https://github.com/Anish-Shobith) • [**Hound**](https://github.com/Warrior-hound) • [**Kartik**](https://github.com/OfficialKartik) • [**Piyush**](https://github.com/officialpiyush) • [**Xynox**](https://github.com/XynoxTheDev)
+[**Anish Shobith**](https://github.com/Anish-Shobith) • [**Hound**](https://github.com/Warrior-hound) • [**Kartik**](https://github.com/OfficialKartik) • [**Piyush**](https://github.com/officialpiyush) • [**Xynox**](https://github.com/XynoxTheDev)
 
