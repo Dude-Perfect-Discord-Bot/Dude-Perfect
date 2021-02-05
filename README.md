@@ -40,13 +40,6 @@ Dude Perfect is a bot that can do most of the things that everything you require
 
 </div>
 
-## Developers 
-- [**Anish Shobith**](https://github.com/Anish-Shobith)
-- [**Hound**](https://github.com/Warrior-hound)
-- [**Kartik**](https://github.com/OfficialKartik)
-- [**Piyush**](https://github.com/officialpiyush)
-- [**Xynox**](https://github.com/XynoxTheDev)
-
 ## How do I report a bug or suggest a feature?
 Feel free to open an issue with your bug report or feature request, with as many details as possible. If you'd like to write a feature, please open an issue first for discussion. For help with the bot, please see join [**Discord**](https://discord.gg/ZzbZpdw).
 
@@ -55,3 +48,7 @@ I wouldn't recommend it. Self-hosting this bot (running a copy yourself) is not 
 
 ## Contributing
 Contributions to Dude Perfect are always appreciated, whether it be improvements to the documentation or new features, please feel free to make the change. Contact our developers on  [**Discord**](https://discord.gg/ZzbZpdw) if required.
+
+## Developers 
+• [**Anish Shobith**](https://github.com/Anish-Shobith) • [**Hound**](https://github.com/Warrior-hound) • [**Kartik**](https://github.com/OfficialKartik) • [**Piyush**](https://github.com/officialpiyush) • [**Xynox**](https://github.com/XynoxTheDev)
+
