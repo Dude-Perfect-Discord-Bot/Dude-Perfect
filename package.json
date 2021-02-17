@@ -23,7 +23,7 @@
     "node-fetch": "^2.6.1",
     "os": "^0.1.1",
     "pluralize": "^8.0.0",
-    "statcord.js": "^3.1.4",
+    "statcord.js": "^3.1.5",
     "superagent": "^6.1.0",
     "twemoji-parser": "^13.0.0",
     "util": "^0.12.3"
