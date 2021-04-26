@@ -42,16 +42,8 @@ class EvalCommand extends Command {
         })
     }
 
-<<<<<<< Updated upstream
 	async exec(message, { code }) {
         if (!code) return message.channel.reply('No code provided!');
-=======
-    async exec(message, { code }) {
-
-        if (message.author.id !== "594853883742912512") return message.reply("<a:RedTick:760514410115498025> **Oie, only `Dad` can run this command.**");	
-        
-        if (!code) return message.util.reply('<a:RedTick:760514410115498025> No code provided!');
->>>>>>> Stashed changes
 
         const evaled = {};
         const logs = [];
