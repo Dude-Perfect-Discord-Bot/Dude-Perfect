@@ -14,8 +14,7 @@ limitations under the License.
 -->
 # Dude Perfect [![Discord](https://discord.com/api/guilds/748808130946793483/embed.png)](https://discord.gg/ZzbZpdw)
 Dude Perfect is just another Discord bot, he is upgrading day by day to bring a smile to your face. Dude Perfect can do most of the things which you require for making a super duper awesome Discord server. We are currently focused on certain modules for each version. Here, we make it our passion to provide you the best Discord bot ever with all awesome features.
-<!--## Wiki
-This section is under development!-->
+
 ## Resources
 ### [Wiki](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/wiki) • [Invite](http://bit.ly/dpdb_xynox) • [Support](https://discord.gg/ZzbZpdw) • [Donate](https://www.patreon.com/arindamz)
 
