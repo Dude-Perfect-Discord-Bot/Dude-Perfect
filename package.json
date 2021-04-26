@@ -7,6 +7,7 @@
   "author": "workforxynox@gmail.com",
   "license": "Apache2.0",
   "dependencies": {
+    "@anishshobith/deeptype": "^1.1.0",
     "canvas": "^2.7.0",
     "canvas-constructor": "^4.1.0",
     "common-tags": "^1.8.0",
@@ -17,6 +18,7 @@
     "figlet": "^1.5.0",
     "fuse-djs": "Anish-Shobith/fuse-djs#build",
     "got": "^11.8.2",
+    "mathjs": "^9.3.2",
     "moment": "^2.29.1",
     "mongoose": "^5.12.5",
     "ms": "^2.1.3",
