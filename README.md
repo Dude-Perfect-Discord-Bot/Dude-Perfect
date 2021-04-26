@@ -17,7 +17,7 @@ Dude Perfect is just another Discord bot, he is upgrading day by day to bring a 
 <!--## Wiki
 This section is under development!-->
 ## Resources
-#### [Wiki](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/wiki) • [Invite](http://bit.ly/dpdb_xynox) • [Support](https://discord.gg/ZzbZpdw) • [Donate](https://www.patreon.com/arindamz)
+### [Wiki](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/wiki) • [Invite](http://bit.ly/dpdb_xynox) • [Support](https://discord.gg/ZzbZpdw) • [Donate](https://www.patreon.com/arindamz)
 
 ## How do I report a bug or suggest a feature?
 Feel free to open an issue with your bug report or feature request, with as many details as possible. If you'd like to write a feature, please open an issue first for discussion. For help with the bot, please see join [**Discord**](https://discord.gg/ZzbZpdw).
