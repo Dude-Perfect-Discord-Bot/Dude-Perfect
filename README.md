@@ -28,9 +28,10 @@ I wouldn't recommend it. Self-hosting this bot (running a copy yourself) is not 
 Contributions to Dude Perfect are always appreciated, whether it be improvements to the documentation or new features, please feel free to make the change. Contact our developers on  [**Discord**](https://discord.gg/ZzbZpdw), if required.
 
 <div align="center">
-    <img src="https://i.imgur.com/zlzxB5C.png" align="center"> 
-  
+    <img src="https://cdn.discordapp.com/attachments/748774519707009055/770662369109213244/PicsArt_10-27-08.26.56.png" align="center"> 
   <strong><i> Dude Perfect is made with ❤️ by
-   [**Anish**](https://github.com/Anish-Shobith) • [**Hound**](https://github.com/Warrior-hound) • [**Kartik**](https://github.com/OfficialKartik) • [**Piyush**](https://github.com/officialpiyush) • [**Xynox**](https://github.com/XynoxTheDev) </i></strong>
+
+  [**Anish**](https://github.com/Anish-Shobith) • [**Hound**](https://github.com/Warrior-hound) • [**Kartik**](https://github.com/OfficialKartik) • [**Piyush**](https://github.com/officialpiyush) • [**Xynox**](https://github.com/XynoxTheDev)
+</i></strong>
 </div>
 
