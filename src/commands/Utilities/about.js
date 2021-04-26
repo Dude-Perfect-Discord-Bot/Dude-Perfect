@@ -41,12 +41,12 @@ class About extends Command {
                 `**${this.client.user.username} is made with ❤️**
                 **${this.client.user.username}** is a bot that can do most of the things that everything you require for making a better and better Discord Server.
                 `)
-            .addField('__General__', [
+            .addField('__General Details__', [
                 `**❯ Client:** ${this.client.user.tag} (\`${this.client.user.id}\`)`,
                 `**❯ Created On:** ${utc(this.client.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
                 `**❯ Uptime:** ${ms(this.client.uptime, { long: true })}.`,
                 `**❯ Devs:** Anish, Hound, Kartik, Piyush & Xynox.`,
-                '\u200b'
+                '\u200b' 
             ])
             .addField('__Frontend Details__', [
                 `**❯ Users:** ${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()}`,

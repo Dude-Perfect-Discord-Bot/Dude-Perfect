@@ -21,7 +21,7 @@ const DBL = require("dblapi.js");
 const { config } = require('dotenv');
 const { join } = require('path');
 
-config();
+config(); 
 
 const commandsPath = join(__dirname, '..', 'commands/');
 const listenersPath = join(__dirname, '..', 'listeners/');

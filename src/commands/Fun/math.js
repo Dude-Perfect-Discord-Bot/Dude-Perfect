@@ -13,46 +13,42 @@
 // limitations under the License.
 
 const { Command } = require('discord-akairo');
+const math = require('mathjs');
 
-class WouldYouRather extends Command {
+class Cal extends Command {
     constructor() {
-        super('wouldYouRather', {
-            aliases: ['wouldYouRather', 'wyr'],
+        super('cal', {
+            aliases: ['cal', 'math', 'calculate'],
             channel: 'guild',
             category: 'Fun',
             description: {
-                content: 'Chooses one of your preferences provide to the bot.',
-                usage: '<choice1> <choice2>',
-                examples: ['tea coffee']
+                content: 'Do mathematical problems with Dude Perfect.',
+                usage: '<problem>',
+                examples: ['1+1']
             },
             args: [
                 {
-                    id: 'q1',
+                    id: 'query',
                     type: 'string',
                     prompt: {
-                        start: "<a:RedTick:760514410115498025> **Provide me your choice 1!**"
+                        start: "<a:RedTick:760514410115498025> **Provide me the right question to be solved!**"
                     },
                 },
-                {
-                    id: 'q2',
-                    type: 'string',
-                    prompt: {
-                        start: "<a:RedTick:760514410115498025> **Provide me your choice 2!**"
-                    },
-                }
-            ]
+            ],
+            typing: true
         });
     }
 
-    exec(message, { q1, q2}) {
+    exec(message, { query }) {
 
-        var ans = [`${q1}`, `${q2}`];
-
-        let answer = ans[Math.floor(Math.random() * ans.length)]
-
-        message.channel.send(`${answer}`);
+        try {
+            let output = math.evaluate(query);
+            message.channel.send(this.lang.calcResult.format(query, output));
+        } catch (e) {
+            message.channel.send(`<a:RedTick:760514410115498025> ${e}`);
+            message.reply(this.lang.invalidCalculation);
+        }
     }
-
 }
 
-module.exports = WouldYouRather;
+module.exports = Cal;

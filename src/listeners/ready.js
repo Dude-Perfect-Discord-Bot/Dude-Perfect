@@ -27,10 +27,10 @@ class Ready extends Listener {
     async exec() {
 
         const activities = [
-            `${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} users!`,
-            `${this.client.guilds.cache.size} guilds!`,
+            `Team init._.iators!`,
             `Anish, Hound, Kartik, Piyush & Xynox!`,
-            `Team init._.iators!`
+            `Working to update every moment!`,
+            `${this.client.guilds.cache.size} guilds!`
         ];
 
         let i = 0;

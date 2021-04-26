@@ -16,7 +16,6 @@ const { Command } = require('discord-akairo');
 const { MessageEmbed } = require('discord.js');
 const got = require('got');
 
-
 class Meme extends Command {
     constructor() {
         super('meme', {
