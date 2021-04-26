@@ -23,8 +23,8 @@ class EvalCommand extends Command {
             ownerOnly: true,
             quoted: false,
             channel: 'guild',
-            category: 'Owner',
-            args: [{ 
+            category: "Bot Owner Only",
+            args: [{
                 id: 'code', type: 'string', match: 'content', default: null, 
                     prompt: {
                         start: `Please provide an expression for me to evaluate`,
