@@ -34,9 +34,6 @@ class XynoxClient extends AkairoClient {
             },
             {
                 disableEveryone: true,
-                 ws: {
-                       intents: Intents.ALL
-                     }
             }
         );
 		
