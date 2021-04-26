@@ -35,8 +35,7 @@ class EightBall extends Command {
                         start: "<a:RedTick:760514410115498025> **You need to ask a question so that I can answer to it!**"
                     },
                 }
-            ],
-            typing: true
+            ]
         });
     }
 

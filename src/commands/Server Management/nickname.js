@@ -42,8 +42,7 @@ class Nickname extends Command {
 
 
                 },
-            ],
-            typing: true
+            ]
         });
     }
     async exec(message, { member, nick }) {

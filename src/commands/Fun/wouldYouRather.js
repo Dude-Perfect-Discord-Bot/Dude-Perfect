@@ -42,8 +42,7 @@ class WouldYouRather extends Command {
                         start: "<a:RedTick:760514410115498025> **Provide me your choice 2!**"
                     },
                 }
-            ],
-            typing: true
+            ]
         });
     }
 

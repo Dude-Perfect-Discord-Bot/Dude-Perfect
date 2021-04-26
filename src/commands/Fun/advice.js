@@ -24,8 +24,7 @@ class Advice extends Command {
             category: 'Fun',
             description: {
                 content: 'Gives a random advice.'
-            },
-            typing: true
+            }
         });
     }
 

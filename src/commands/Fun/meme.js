@@ -25,8 +25,7 @@ class Meme extends Command {
             category: 'Fun',
             description: {
                 content: 'Gives a random meme to laugh.'
-            },
-            typing: true
+            }
         });
     }
 

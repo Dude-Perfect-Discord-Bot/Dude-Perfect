@@ -26,8 +26,7 @@ class About extends Command {
             category: 'Utilities',
             description: {
                 content: 'Displays information about the bot.'
-            },
-            typing: true
+            }
         });
     }
 

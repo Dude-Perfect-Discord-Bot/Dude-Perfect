@@ -5,7 +5,6 @@ module.exports = class Reload extends Command {
         super('reload', {
             aliases: ['reload'],
             ownerOnly: true,
-            typing: true,
             clientPermissions: ['SEND_MESSAGES', 'ADD_REACTIONS', 'USE_EXTERNAL_EMOJIS'],
             description: {
                 content: 'Reload a command/listener/inhibitor',

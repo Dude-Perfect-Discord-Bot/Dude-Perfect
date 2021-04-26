@@ -13,6 +13,7 @@
 // limitations under the License.
 
 const { log } = require('console');
+const { Client, Intents } = require("discord.js");
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
 const { Client: StatcordClient } = require("statcord.js");
 const DBL = require("dblapi.js");
@@ -32,10 +33,13 @@ class XynoxClient extends AkairoClient {
                 ownerID: process.env.ownerID
             },
             {
-                disableEveryone: true
+                disableEveryone: true,
+                 ws: {
+                       intents: Intents.ALL
+                     }
             }
         );
-
+		
         // Stats
         this.statCord = new StatcordClient({
             client: this,

@@ -25,8 +25,7 @@ class GuildInfo extends Command {
             description: {
                 content: 'Displays information about the server.'
             },
-            ratelimit: 2,
-            typing: true
+            ratelimit: 2
         });
     }
 

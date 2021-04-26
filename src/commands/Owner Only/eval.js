@@ -11,31 +11,39 @@
 //     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
 const { Command } = require('discord-akairo');
-const util = require('util');
+const { MessageAttachment } = require('discord.js');
+const { Type } = require('@anishshobith/deeptype');
+const { inspect } = require('util');
 
 class EvalCommand extends Command {
     constructor() {
         super('eval', {
-            aliases: ['eval', 'e'],
-            category: 'Bot Owner Only',
-            typing: true,
+            aliases: ['eval', 'evaluate', 'e', 'ev'],
+            ownerOnly: true,
             quoted: false,
-            args: [
-                {
-                    id: 'code',
-                    match: 'content'
-                }
-            ]
-        });
+            channel: 'guild',
+            category: 'Owner',
+            args: [{ 
+                id: 'code', type: 'string', match: 'content', default: null, 
+                    prompt: {
+                        start: `Please provide an expression for me to evaluate`,
+                        retry: `Please provide an expression for me to evaluate`,    
+                    } 
+            }],
+            description: {
+                usage: 'eval [ code ]',
+                examples: ['eval let i = 0'],
+                description: 'Evaluates JavaScript code'
+            },
+            cooldown: 6000,
+            ratelimit: 2,
+            
+        })
     }
 
-    async exec(message, { code }) {
-
-        if (message.author.id !== "594853883742912512") return message.reply("**Only `Bot Owner` can run this command.**");	
-        
-        if (!code) return message.util.reply('No code provided!');
+	async exec(message, { code }) {
+        if (!code) return message.channel.reply('No code provided!');
 
         const evaled = {};
         const logs = [];
@@ -47,7 +55,7 @@ class EvalCommand extends Command {
 
         const print = (...a) => { // eslint-disable-line no-unused-vars
             const cleaned = a.map(obj => {
-                if (typeof o !== 'string') obj = util.inspect(obj, { depth: 1 });
+                if (typeof o !== 'string') obj = channel.inspect(obj, { depth: 1 });
                 return obj.replace(tokenRegex, '[TOKEN]');
             });
 
@@ -66,6 +74,9 @@ class EvalCommand extends Command {
                 cb,
                 `${title}${cb}js`,
                 evaled.output,
+                cb,
+                `⭐\u2000**Type**:${cb}js`,
+                new Type(evaled.output).is,
                 cb
             ]);
         };
@@ -73,19 +84,23 @@ class EvalCommand extends Command {
         try {
             let output = eval(code);
             if (output && typeof output.then === 'function') output = await output;
+            const oldType = output;
 
-            if (typeof output !== 'string') output = util.inspect(output, { depth: 0 });
+            if (typeof output !== 'string') output = inspect(output, { depth: 0 });
             output = `${logs.join('\n')}\n${logs.length && output === 'undefined' ? '' : output}`;
             output = output.replace(tokenRegex, '[TOKEN]');
 
             if (output.length + code.length > 1900) output = 'Output too long.';
 
-            const sent = await message.util.send([
+            const sent = await message.channel.send([
                 `📥\u2000**Input**${cb}js`,
                 code,
                 cb,
                 `📤\u2000**Output**${cb}js`,
                 output,
+                cb,
+                `⭐\u2000**Type**:${cb}js`,
+                new Type(oldType).is,
                 cb
             ]);
 
@@ -102,7 +117,7 @@ class EvalCommand extends Command {
             error = `${logs.join('\n')}\n${logs.length && error === 'undefined' ? '' : error}`;
             error = error.replace(tokenRegex, '[TOKEN]');
 
-            const sent = await message.util.send([
+            const sent = await message.channel.send([
                 `📥\u2000**Input**${cb}js`,
                 code,
                 cb,
@@ -119,5 +134,4 @@ class EvalCommand extends Command {
         }
     }
 }
-
 module.exports = EvalCommand;

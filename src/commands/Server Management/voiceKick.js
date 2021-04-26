@@ -41,8 +41,7 @@ class VoiceKick extends Command {
                     type: 'string',
                     match: 'rest'
                 }
-            ],
-            typing: true
+            ]
         });
     }
 

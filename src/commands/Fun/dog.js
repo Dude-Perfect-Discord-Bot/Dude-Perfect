@@ -30,8 +30,7 @@ class Dog extends Command {
             category: 'Fun',
             description: {
                 content: 'Gives a random pic of a dog.'
-            },
-            typing: true
+            }
         });
     }
 

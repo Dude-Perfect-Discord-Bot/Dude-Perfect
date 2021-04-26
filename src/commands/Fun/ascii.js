@@ -28,7 +28,6 @@ class Ascii extends Command {
                 usage: '<text>',
                 examples: ['Dude Perfect']
             },
-            typing: true,
             args: [
                 {
                     id: 'text',

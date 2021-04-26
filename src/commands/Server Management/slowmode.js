@@ -35,8 +35,7 @@ class Slowmode extends Command {
                 content: 'Sets the slowmode in channel.',
                 usage: '<time>',
                 examples: ['5']
-            },
-            typing: true
+            }
         });
     }
 

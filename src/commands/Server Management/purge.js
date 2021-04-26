@@ -42,9 +42,7 @@ class Purge extends Command {
                         retry: (msg) => `<a:RedTick:760514410115498025> ${msg.author}, please enter a number between 2 and 100!`,
                     },
                 }
-            ],
-            typing: true
-
+            ]
         });
     }
 

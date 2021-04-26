@@ -3,10 +3,11 @@
   "version": "2.1.6",
   "description": "Dude Perfect is a bot that can do most of the things that everything you require for making a better and better Discord Server",
   "main": "src/index.js",
-  "repository": "https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect.git",
+  "repository": "https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect",
   "author": "workforxynox@gmail.com",
   "license": "Apache2.0",
   "dependencies": {
+    "@anishshobith/deeptype": "^1.1.0",
     "canvas": "^2.1.6",
     "canvas-constructor": "^4.1.0",
     "common-tags": "^1.8.0",

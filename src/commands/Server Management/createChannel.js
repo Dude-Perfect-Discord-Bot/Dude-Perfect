@@ -43,9 +43,7 @@ class CreateChannel extends Command {
                         start: "<a:RedTick:760514410115498025> **You need to mention channel name!**"
                     },
                 }
-            ],
-            typing: true
-
+            ]
         });
     }
 
