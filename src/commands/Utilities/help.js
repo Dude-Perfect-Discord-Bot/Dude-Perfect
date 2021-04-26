@@ -91,7 +91,7 @@ class HelpCommand extends Command {
                 );    
             }
             embed.addField(`❯ Check Out`, [
-                ` [**Support**](https://discord.gg/ZzbZpdw) • [**Invite**](https://discord.com/api/oauth2/authorize?client_id=759763855680602122&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FZzbZpdw&scope=bot) • [**GitHub**](https://github.com/Dude-Perfect-Discord-Bot)`
+                ` [Wiki](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/wiki) • [Invite](http://bit.ly/dpdb_xynox) • [Support](https://discord.gg/ZzbZpdw) • [**GitHub**](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect) • [Donate](https://www.patreon.com/arindamz)`
             ]);
 
         }
