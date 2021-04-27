@@ -19,7 +19,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = class ViewPerm extends Command {
     constructor() {
         super('viewPerm', {
-            aliases: ['perms','permissions'],
+            aliases: ['perms','permissions', 'myperm'],
             channel: 'guild',
             category: 'Fun',
             description: {
@@ -41,12 +41,17 @@ module.exports = class ViewPerm extends Command {
         const permissions = this.normalizePermFlag(member.permissions.toArray()).map(perm => `\`${perm}\``);
 
         const embed = new MessageEmbed()
-            .setTitle(`${member.user.tag}`)
-            .setThumbnail(message.guild.iconURL({ dynamic: true }))
+            .setAuthor(
+                `${member.user.tag} 👇`,
+                `${message.guild.iconURL({ dynamic: true })}`
+                )
+            .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
             .setColor('#00ff9e')
-            .setDescription(`You have these permissions...${permissions.join(' | ')}`)
-            .setFooter(`Thanks for using ${this.client.user.username}`)
-            .setTimestamp();
+            .setDescription(`**Your Member Guild Permissions in ${message.guild.name} are:** \n${permissions.join(' | ')}`)
+            .setFooter(
+                `${this.client.user.username} is made with ❤️`,
+                `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
+            );
         message.channel.send(embed);
     }
 
