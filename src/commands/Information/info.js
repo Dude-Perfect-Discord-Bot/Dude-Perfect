@@ -63,22 +63,6 @@ class UserInfo extends Command {
             .slice(0, -1);
         const userFlags = (member.user.flags ? member.user.flags.toArray() : []);
 
-        let status = ""
-        if (member.user.presence.clientStatus && member.user.presence.clientStatus.mobile) status = "Mobile"
-        if (member.user.presence.clientStatus && member.user.presence.clientStatus.desktop) status = "Desktop"
-        if (member.user.presence.clientStatus && member.user.presence.clientStatus.web) status = "Website"
-        if (member.user.presence.status === "offline") status = "The user is offline/invisible or there is some issue to track device."
-
-        let emoji = ""
-        if (`${member.user.presence.status}` === "online") emoji = "<:OnlineStatus:753975990417358869>"
-        if (`${member.user.presence.status}` === "idle") emoji = "<:IdleStatus:753976530874400918>"
-        if (`${member.user.presence.status}` === "dnd") emoji = "<:status_dnd:753976689402445857>"
-        if (`${member.user.presence.status}` === "offline") emoji = "<:OfflineStatus:753976062232232096>"
-
-        // let game;
-        // if (member.user.presence.activities.length >= 1) game = `${member.user.presence.activities[0].type} - ${member.user.presence.activities[0].name}`;
-        // else if (member.user.presence.activities.length < 1) game = "Not playing a game"; 
-
         const embed = new MessageEmbed()
             .setTitle(`${member.user.tag}`)
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
@@ -88,9 +72,6 @@ class UserInfo extends Command {
                 `**❯ Tag:** ${member.user.tag}`,
                 `**❯ ID:** ${member.id}`,
                 `**❯ Avatar:** [Link to avatar](${member.user.displayAvatarURL({ dynamic: true })})`,
-             //   `**❯ Device:** ${status} `,
-             //   `**❯ Status:** ${member.user.presence.status} (${emoji})`,
-             //   `**❯ Game:** ${game}`,
                 `**❯ Time Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} (${moment(member.user.createdTimestamp).fromNow()})`,
                 `\u200b`
             ])
@@ -101,8 +82,10 @@ class UserInfo extends Command {
                 `**❯ Roles [${roles.length}]:** ${roles.slice(0, 10).join(', ') || 'None'}`,
                 `\u200b`
             ])
-            .setFooter(`Thanks for using ${this.client.user.username}`)
-            .setTimestamp();
+            .setFooter(
+                `${this.client.user.username} is made with ❤️`,
+                `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
+            );
         message.channel.send(embed);
     }
 }
