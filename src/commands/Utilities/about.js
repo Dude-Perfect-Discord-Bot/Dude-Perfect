@@ -63,7 +63,7 @@ class About extends Command {
                 '\u200b'
             ], true)
             .addField('__Check Out__', [
-                ` [**Support**](https://discord.gg/ZzbZpdw) • [**Invite**](https://discord.com/api/oauth2/authorize?client_id=759763855680602122&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FZzbZpdw&scope=bot) • [**GitHub**](https://github.com/Dude-Perfect-Discord-Bot)`,
+                ` [**Wiki**](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/wiki) • [**Invite**](http://bit.ly/dpdb_xynox) • [**Support**](https://discord.gg/ZzbZpdw) • [**GitHub**](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect) • [**Donate**](https://www.patreon.com/arindamz)`,
                 '\u200b'
             ])
             .addField('__NOTE__', [
@@ -72,8 +72,10 @@ class About extends Command {
                 We have taken grants for using their artworks.`,
                 '\u200b'
             ])
-            .setFooter(`Thanks for using ${this.client.user.username}`)
-            .setTimestamp();
+            .setFooter(
+                `${this.client.user.username} is made with ❤️`,
+                `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
+            );
     
         message.channel.send(embed);
     }

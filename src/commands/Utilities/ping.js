@@ -34,7 +34,7 @@ class Ping extends Command {
         const choices = ['Is this really my ping?', 'Is that okay? I can\'t look!', 'I hope it isn\'t bad!'];
         const reponse = choices[Math.floor(Math.random() * choices.length)];
 
-        msg.edit(`${reponse} - **Bot Latency**: \`${latency}ms\`, **API Latency**: \`${Math.round(this.client.ws.ping)}ms\``)
+        msg.edit(`${reponse} - **Bot Latency**: \`${latency}ms\`, **API Latency**: \`${Math.round(this.client.ws.ping)}ms\`.`)
 
     }
 }

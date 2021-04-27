@@ -45,7 +45,10 @@ class Dog extends Command {
                 .setTitle(`Bow 🐶`)
                 .setColor("#00ff9e")
                 .setImage(`https://imgur.com/${selected.hash}${selected.ext.replace(/\?.*/, '')}`)
-                .setFooter(`Thanks for using ${this.client.user.username}`)
+                .setFooter(
+                    `${this.client.user.username} is made with ❤️`,
+                    `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
+                )
             );
 
     }

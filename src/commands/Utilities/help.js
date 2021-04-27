@@ -67,7 +67,7 @@ class HelpCommand extends Command {
         } else {
             embed
                 .setTitle('Help Interface')
-                .setThumbnail(`https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`)
+                .setThumbnail(`https://i.imgur.com/l0IdkG2.png`)
                 .setDescription(
                     stripIndents`
                     These are the commands which are executable in the **${this.client.user.username}**.
@@ -77,7 +77,7 @@ class HelpCommand extends Command {
                 )
                 .setFooter(
                     `${this.client.user.username} is made with ❤️`,
-                    this.client.user.displayAvatarURL()
+                    `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
                 );
 
             for (const category of this.handler.categories.values()) {

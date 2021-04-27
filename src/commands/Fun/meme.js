@@ -35,13 +35,13 @@ class Meme extends Command {
             let content = JSON.parse(response.body);
             let memeImage = content[0].data.children[0].data.url;
             let memeTitle = content[0].data.children[0].data.title;
-            let memeUpvotes = content[0].data.children[0].data.ups;
-            let memeDownvotes = content[0].data.children[0].data.downs;
-            let memeNumComments = content[0].data.children[0].data.num_comments;
             embed.setTitle(`**${memeTitle}**`);
             embed.setImage(memeImage);
             embed.setColor("#00ff9e");
-            embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`);
+            embed.setFooter(
+                `${this.client.user.username} is made with ❤️`,
+                `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
+            );
             message.channel.send(embed)
 
 

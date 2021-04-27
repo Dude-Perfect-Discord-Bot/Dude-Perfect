@@ -28,7 +28,7 @@ class Support extends Command {
 
     exec(message) {
 
-        message.reply('**Join ❯ ** https://discord.gg/ZzbZpdw')
+        message.reply('**Join ❯ ** \nhttps://discord.gg/ZzbZpdw')
 
     }
 }

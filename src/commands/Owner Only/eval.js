@@ -33,10 +33,9 @@ class EvalCommand extends Command {
             }],
             description: {
                 usage: 'eval [ code ]',
-                examples: ['eval let i = 0'],
+                examples: ['eval this.client'],
                 description: 'Evaluates JavaScript code'
             },
-            cooldown: 6000,
             ratelimit: 2,
             
         })
@@ -53,7 +52,7 @@ class EvalCommand extends Command {
         const tokenRegex = new RegExp(`${token}|${rev}`, 'g');
         const cb = '```';
 
-        const print = (...a) => { // eslint-disable-line no-unused-vars
+        const print = (...a) => { 
             const cleaned = a.map(obj => {
                 if (typeof o !== 'string') obj = channel.inspect(obj, { depth: 1 });
                 return obj.replace(tokenRegex, '[TOKEN]');

@@ -47,8 +47,11 @@ class Avatar extends Command {
             .setImage(member.user.displayAvatarURL({ size: 4096, dynamic: true }))
             .setColor("#00ff9e")
             .setTitle(`**Avatar of ${member.user.tag} **`)
-            .setFooter(`Thanks for using ${this.client.user.username}`)
-            .setDescription("[**Avatar URL link**](" + member.user.displayAvatarURL({ dynamic: true }) + ")");
+            .setDescription("[**Avatar URL link**](" + member.user.displayAvatarURL({ dynamic: true }) + ")")
+            .setFooter(
+                `${this.client.user.username} is made with ❤️`,
+                `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
+            );
 
         message.channel.send(embed);
 

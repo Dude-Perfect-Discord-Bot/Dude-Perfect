@@ -50,7 +50,10 @@ class EightBall extends Command {
             .setColor("#00ff9e")
             .setDescription(`What I think is: **${answer}**`)
             .setTimestamp()
-            .setFooter(`Thanks for using ${this.client.user.username}`)
+            .setFooter(
+                `${this.client.user.username} is made with ❤️`,
+                `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
+            );
 
         message.channel.send(em);
     }

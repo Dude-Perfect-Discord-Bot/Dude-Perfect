@@ -25,8 +25,6 @@ module.exports = class Reload extends Command {
     }
     async exec(message, { things }) {
 
-        if (message.author.id !== "594853883742912512") return message.reply("<a:RedTick:760514410115498025> **Oie, only `Dad` can run this command.**");	
-
         try{
             await things.reload()
             message.react("<:check:753484699237613630>")
