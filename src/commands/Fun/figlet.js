@@ -17,14 +17,14 @@ const { MessageEmbed } = require('discord.js');
 const figlet = require('util').promisify(require('figlet'));
 
 
-class Ascii extends Command {
+class Figlet extends Command {
     constructor() {
-        super('ascii', {
-            aliases: ['ascii'],
+        super('figlet', {
+            aliases: ['figlet'],
             channel: 'guild',
             category: 'Fun',
             description: {
-                content: 'Creates ASCII art from text.',
+                content: 'Creates Figlet art from text.',
                 usage: '<text>',
                 examples: ['Dude Perfect']
             },
@@ -48,4 +48,4 @@ class Ascii extends Command {
     }
 }
 
-module.exports = Ascii;
+module.exports = Figlet;
