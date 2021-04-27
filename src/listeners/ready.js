@@ -26,7 +26,7 @@ class Ready extends Listener {
 
     async exec() {
 
-        this.client.user.setActivity(`dp!help | made with ❤️`, { type: 'WATCHING' });
+        this.client.user.setActivity(`dp!help | Made with ❤️`, { type: 'WATCHING' });
 
         console.log(await figlet(`${this.client.user.username}`)); 
     }
