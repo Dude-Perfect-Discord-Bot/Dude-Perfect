@@ -67,7 +67,7 @@ class HelpCommand extends Command {
         } else {
             embed
                 .setTitle('Help Interface')
-                .setThumbnail(this.client.user.displayAvatarURL())
+                .setThumbnail(`https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`)
                 .setDescription(
                     stripIndents`
                     These are the commands which are executable in the **${this.client.user.username}**.
