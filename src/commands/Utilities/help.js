@@ -66,7 +66,10 @@ class HelpCommand extends Command {
             }
         } else {
             embed
-                .setTitle('Help Interface')
+                .setAuthor(
+                    `Help Interface`,
+                    `${message.guild.iconURL({ dynamic: true })}`
+                )
                 .setThumbnail(`https://i.imgur.com/l0IdkG2.png`)
                 .setDescription(
                     stripIndents`
