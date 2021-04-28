@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+const Discord = require('discord.js');
 const { Command } = require('discord-akairo');
 
 class Support extends Command {
@@ -27,8 +28,13 @@ class Support extends Command {
     }
 
     exec(message) {
+        const embed = new Discord.MessageEmbed()
+        .setColor('#00ff9e')
+        .setTitle('Want Some Support?')
+        .setDescription('Join ❯ https://discord.gg/ZzbZpdw')
+        .setFooter(`${this.client.user.username} is made with ❤️`, `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`)
 
-        message.reply('**Join ❯ ** https://discord.gg/ZzbZpdw')
+        message.channel.send(embed)
 
     }
 }
