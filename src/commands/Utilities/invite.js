@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+const Discord = require('discord.js');
 const { Command } = require('discord-akairo');
 
 class Invite extends Command {
@@ -27,8 +28,15 @@ class Invite extends Command {
     }
 
     exec(message) {
+        const embed = new Discord.MessageEmbed()
+        .setColor('#00ff9e')
+        .setTitle('Want To Invite Me?')
+        .addField('Invite Link ❯', [
+            '[DO it Right Now!](https://discord.com/api/oauth2/authorize?client_id=759763855680602122&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FZzbZpdw&scope=bot)'
+        ])
+        .setFooter(`${this.client.user.username} is made with ❤️`, `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`)
 
-        message.reply('**Invite me ❯ ** https://discord.com/api/oauth2/authorize?client_id=759763855680602122&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.com%2Finvite%2FZzbZpdw&scope=bot')
+        message.channel.send(embed)
 
     }
 }
