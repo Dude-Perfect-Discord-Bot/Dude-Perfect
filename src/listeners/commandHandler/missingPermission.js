@@ -12,11 +12,11 @@ module.exports = class extends Listener {
 		const text = {
 			client: () => {
 				const str = this.missingPermissions(message.channel, message.guild.me, missing);
-				return `<a:RedTick:760514410115498025> **I'm missing ${str} to use that command.**`;
+				return `<a:RedTick:760514410115498025> **Uh, Oh! Looks like I dont have ${str} perms to use that command.**`;
 			},
 			user: () => {
 				const str = this.missingPermissions(message.channel, message.member, missing);
-				return `<a:RedTick:760514410115498025> **You are missing ${str} to use that command.**`;
+				return `<a:RedTick:760514410115498025> **Nah! You are missing ${str} perms to use that command.**`;
 			}
         }[type];
 
