@@ -70,7 +70,7 @@ class HelpCommand extends Command {
                     `Help Interface`,
                     `${message.guild.iconURL({ dynamic: true })}`
                 )
-                .setThumbnail(`https://i.imgur.com/l0IdkG2.png`)
+                .setThumbnail(`https://i.imgur.com/OpNjeck.png`)
                 .setDescription(
                     stripIndents`
                     These are the commands which are executable in the **${this.client.user.username}**.
