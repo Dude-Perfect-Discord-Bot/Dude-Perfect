@@ -26,15 +26,7 @@ class Ready extends Listener {
 
     async exec() {
 
-        const activities = [
-            `${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} users!`,
-            `${this.client.guilds.cache.size} guilds!`,
-            `Anish, Hound, Kartik, Piyush & Xynox!`,
-            `Team init._.iators!`
-        ];
-
-        let i = 0;
-        setInterval(() => this.client.user.setActivity(`dp!help | ${activities[i++ % activities.length]}`, { type: 'WATCHING' }), 15000);
+        this.client.user.setActivity(`dp!help | Made with ❤️`, { type: 'WATCHING' });
 
         console.log(await figlet(`${this.client.user.username}`)); 
     }
