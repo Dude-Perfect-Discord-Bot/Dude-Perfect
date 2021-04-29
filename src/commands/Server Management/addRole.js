@@ -35,8 +35,8 @@ class AddRole extends Command {
         let member = message.mentions.members.first();
         if (!member) return message.reply('<a:RedTick:760514410115498025> No Member Found!');
       
-        let arole = message.mentions.roles.last();
-        let role = message.guild.roles.cache.find(r => r.name === arole);
+        const roleName = args.slice(1).join(" ");
+        let role = message.guild.roles.cache.find(r => r.name === roleName) || message.guild.roles.cache.find(r => r.id === args[1]);
         if (!role) return message.reply('<a:RedTick:760514410115498025> No Role Found!');
       
           member.roles.add(role).then(message.channel.send('<:check:753484699237613630> Added Role to User!'))
