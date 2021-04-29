@@ -36,7 +36,7 @@ class SpotifyCommand extends Command {
         this.color = '#1DD05D';
         this.spotifyLogo = 'https://cdn.br4d.vip/spotify.png';
         this.spotifyWsLogo = 'https://cdn.br4d.vip/spotify-ws.png';
-        this.baseUrl = 'https://s.brys.tk';
+        this.baseUrl = 'https://spotify.com';
     }
     async exec(message, args) {
         if (!args.query) {
