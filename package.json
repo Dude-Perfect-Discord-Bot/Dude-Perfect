@@ -7,6 +7,7 @@
   "author": "workforxynox@gmail.com",
   "license": "Apache2.0",
   "dependencies": {
+    "@aero/centra": "^1.0.6",
     "@anishshobith/deeptype": "^1.1.0",
     "canvas": "^2.7.0",
     "canvas-constructor": "^4.1.0",
