@@ -17,7 +17,7 @@ const { Command } = require('discord-akairo');
 class RemoveRole extends Command {
     constructor() {
         super('removeRole', {
-            aliases: ['removeRole', 'removerole', 'remover', 'roleremove'],
+            aliases: ['removeRole', 'remover', 'roleremove'],
             channel: 'guild',
             category: 'Guild Management',
             description: {
@@ -35,7 +35,7 @@ class RemoveRole extends Command {
         let member = message.mentions.members.first();
         if (!member) return message.reply('<a:RedTick:760514410115498025> No Member Found!');
       
-        let arole = args.slice(1).join(" ");
+        let arole = message.mentions.roles.last();
         let role = message.guild.roles.cache.find(r => r.name === arole);
         if (!role) return message.reply('<a:RedTick:760514410115498025> No Role Found!');
       
