@@ -29,7 +29,7 @@ class Cat extends Command {
             channel: 'guild',
             category: 'Fun',
             description: {
-                content: 'Gives a random pic of a cat.'
+                content: 'Gives a random pic of a cat from reddit.'
             }
         });
     }
