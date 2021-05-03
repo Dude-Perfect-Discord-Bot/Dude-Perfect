@@ -484,7 +484,6 @@ function-bind@^1.1.1:
 
 fuse-djs@Anish-Shobith/fuse-djs#build:
   version "2.2.3"
-  uid "4791e78aec1b2e81e3f2bd30691bbf51745af51a"
   resolved "https://codeload.github.com/Anish-Shobith/fuse-djs/tar.gz/4791e78aec1b2e81e3f2bd30691bbf51745af51a"
   dependencies:
     fuse.js "^6.4.6"
