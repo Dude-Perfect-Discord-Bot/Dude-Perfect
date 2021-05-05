@@ -18,7 +18,6 @@
     "figlet": "^1.5.0",
     "fuse-djs": "Anish-Shobith/fuse-djs#build",
     "got": "^11.8.2",
-    "mathjs": "^9.3.2",
     "moment": "^2.29.1",
     "mongoose": "^5.12.7",
     "ms": "^2.1.3",
