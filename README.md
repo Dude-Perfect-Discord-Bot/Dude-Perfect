@@ -20,4 +20,3 @@ Contributions to Dude Perfect are always appreciated, whether it be improvements
   [**Anish**](https://github.com/Anish-Shobith) • [**Hound**](https://github.com/Warrior-hound) • [**Kartik**](https://github.com/OfficialKartik) • [**Piyush**](https://github.com/officialpiyush) • [**Xynox**](https://github.com/XynoxTheDev)
 </i></strong>
 </div>
-
