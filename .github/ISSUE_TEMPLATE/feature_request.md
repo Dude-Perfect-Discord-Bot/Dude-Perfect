@@ -18,3 +18,4 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
+> (Prefer to use [Github Commits](https://www.conventionalcommits.org/en/v1.0.0/))
