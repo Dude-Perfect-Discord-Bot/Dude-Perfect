@@ -1,2 +1,11 @@
-# Global Owners
-* @XynoxTheDev @officialpiyush @Anish-Shobith
+# Source Files
+/src/ @XynoxTheDev @officialpiyush @Anish-Shobith
+
+# Github Files
+/.github/ @XynoxTheDev
+/LICENSE @XynoxTheDev
+/README.md @XynoxTheDev
+
+# Dependency Files
+/.gitattributes @XynoxTheDev
+/.gitignore @XynoxTheDev
