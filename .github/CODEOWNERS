@@ -1,14 +1,2 @@
 # Global Owners
 * @XynoxTheDev @officialpiyush @Anish-Shobith
-
-# Source Files
-/src/ @XynoxTheDev @officialpiyush @Anish-Shobith
-
-# Intregation Files
-/src/listeners/commandHandler @officialpiyush @Anish-Shobith
-/src/listeners/dbl @officialpiyush @Anish-Shobith
-/src/listeners/statcord @officialpiyush @Anish-Shobith
-
-# Github Files
-/.github/ @XynoxTheDev
-/README.md @XynoxTheDev
