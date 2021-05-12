@@ -15,6 +15,7 @@ Contributions to Dude Perfect are always appreciated, whether it be improvements
 
 <div align="center">
     <img src="https://cdn.discordapp.com/attachments/748774519707009055/770662369109213244/PicsArt_10-27-08.26.56.png" align="center"> 
+  
   <strong><i> Dude Perfect is made with ❤️ by
 
   [**Anish**](https://github.com/Anish-Shobith) • [**Hound**](https://github.com/Warrior-hound) • [**Kartik**](https://github.com/OfficialKartik) • [**Piyush**](https://github.com/officialpiyush) • [**Xynox**](https://github.com/XynoxTheDev)
