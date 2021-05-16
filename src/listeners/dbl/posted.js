@@ -2,13 +2,13 @@ const { Listener } = require("discord-akairo")
 
 module.exports = class extends Listener {
     constructor() {
-        super('dblError', {
-            event: 'error',
+        super('dblPosted', {
+            event: 'posted',
             emitter: 'dbl'
         });
     }
 
-    exec(error) {
-        console.log("An error occured while posting stats to DBL", error)
+    exec() {
+        console.log("Posted to top.gg");
     }
 }
