@@ -166,8 +166,8 @@
   description: Issues that do not belong to the Issue Tracker and should be asked
     in the official Discord Server.
   color: cc317c
-- name: 'Type: Ribbon Migration'
-  description: These are issues related to migrating features from Ribbon to bot.
+- name: 'Type: Migration'
+  description: These are issues related to migrating features to bot.
   color: 1d76db
 - name: 'Type: Security'
   description: Pull requests that address a security vulnerability
