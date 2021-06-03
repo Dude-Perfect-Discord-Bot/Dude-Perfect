@@ -2,7 +2,7 @@ const { log } = require('console');
 const { Client, Intents } = require("discord.js");
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
 const { Client: StatcordClient } = require("statcord.js");
-const AutoPoster = require("topgg-autoposter");
+const { AutoPoster } = require("topgg-autoposter");
 
 const { config } = require('dotenv');
 const { join } = require('path');
