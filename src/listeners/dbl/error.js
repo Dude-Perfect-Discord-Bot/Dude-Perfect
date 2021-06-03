@@ -9,6 +9,6 @@ module.exports = class extends Listener {
     }
 
     exec(error) {
-        console.log("An error occured while posting stats to DBL", error)
+        console.log(`Error while posting logs to DBL: ${error}`);
     }
 }

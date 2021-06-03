@@ -2,35 +2,30 @@ const { log } = require('console');
 const { Client, Intents } = require("discord.js");
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
 const { Client: StatcordClient } = require("statcord.js");
-const DBL = require("dblapi.js");
+const { AutoPoster } = require("topgg-autoposter");
 
 const { config } = require('dotenv');
 const { join } = require('path');
 
-config(); 
+config();
 
 const commandsPath = join(__dirname, '..', 'commands/');
 const listenersPath = join(__dirname, '..', 'listeners/');
 
 class XynoxClient extends AkairoClient {
     constructor() {
-        super(
-            {
-                ownerID: process.env.ownerID
-            },
-            {
-                disableEveryone: true,
-            }
-        );
-		
+        super({
+            ownerID: process.env.ownerID
+        }, {
+            disableEveryone: true,
+        });
+
         // Stats
         this.statCord = new StatcordClient({
             client: this,
             key: process.env.STATCORD_KEY
         })
-        this.dbl = new DBL(process.env.TOP_GG_TOKEN, {
-            statsInterval: 900000
-        }, this)
+        this.dbl = new AutoPoster(process.env.TOP_GG_TOKEN, this)
 
         // Handlers . . .
         this.commandHandler = new CommandHandler(this, {
@@ -62,6 +57,6 @@ class XynoxClient extends AkairoClient {
     }
 }
 
-        // Client Login . . .
+// Client Login . . .
 const client = new XynoxClient();
 client.login(process.env.TOKEN);
