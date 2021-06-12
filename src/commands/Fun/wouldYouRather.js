@@ -33,11 +33,11 @@ class WouldYouRather extends Command {
   }
 
   exec(message, { q1, q2 }) {
-    var ans = [`${q1}`, `${q2}`];
+    const ans = [q1, q2];
 
     const answer = ans[Math.floor(Math.random() * ans.length)];
 
-    message.channel.send(`${answer}`);
+    message.channel.send(answer);
   }
 }
 
