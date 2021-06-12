@@ -48,9 +48,7 @@ class VoiceKick extends Command {
         );
       })
       .catch((err) => {
-        return message.util.send(
-          `<a:RedTick:760514410115498025> **${err}**`
-        );
+        return message.util.send(`<a:RedTick:760514410115498025> **${err}**`);
       });
   }
 }
