@@ -10,11 +10,12 @@ const { config } = require('dotenv');
 const { join } = require('path');
 
 config();
-
 class DudePerfectClient extends AkairoClient {
   constructor() {
     super({
-      ownerID: process.env.owners.split(',') ?? process.env.ownerID,
+      ownerID: process.env.owners
+        ? process.env.owners.split(',')
+        : process.env.ownerID,
       disableMentions: 'everyone',
     });
 

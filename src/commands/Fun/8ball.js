@@ -8,7 +8,7 @@ class EightBall extends Command {
       channel: 'guild',
       category: 'Fun',
       description: {
-        content: 'Provides you a random question based on your questions.',
+        content: 'Provides you a random answer based on your questions.',
         usage: '<question>',
         examples: ['Why do you exist on Discord?'],
       },
