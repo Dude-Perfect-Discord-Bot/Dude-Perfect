@@ -1,14 +1,14 @@
-const { Listener } = require("discord-akairo")
+const { Listener } = require('discord-akairo');
 
 module.exports = class extends Listener {
-    constructor() {
-        super('dblError', {
-            event: 'error',
-            emitter: 'dbl'
-        });
-    }
+  constructor() {
+    super('dblError', {
+      event: 'error',
+      emitter: 'dbl',
+    });
+  }
 
-    exec(error) {
-        console.log(`Error while posting logs to DBL: ${error}`);
-    }
-}
+  exec(error) {
+    console.log(`Error while posting logs to DBL: ${error}`);
+  }
+};
