@@ -24,7 +24,7 @@ class Avatar extends Command {
   }
 
   async exec(message, args) {
-    const msg = await message.channel.send(
+    const msg = await message.util.send(
       '<a:setting:754636981459353701> Generating avatar...'
     );
 
@@ -44,7 +44,7 @@ class Avatar extends Command {
         `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
       );
 
-    message.channel.send(embed);
+    message.util.send(embed);
 
     msg.delete();
   }

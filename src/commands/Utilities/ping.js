@@ -13,7 +13,7 @@ class Ping extends Command {
   }
 
   async exec(message) {
-    const msg = await message.channel.send('Pinging...');
+    const msg = await message.util.send('Pinging...');
 
     const latency = msg.createdTimestamp - message.createdTimestamp;
     const choices = [

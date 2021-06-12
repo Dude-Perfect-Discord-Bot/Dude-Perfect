@@ -24,7 +24,7 @@ class Cat extends Command {
       .then((response) => response.json())
       .then((body) => body.data);
     const selected = data[Math.floor(Math.random() * data.length)];
-    return message.channel.send(
+    return message.util.send(
       new MessageEmbed()
         .setTitle(`Meow 🐱`)
         .setColor('#00ff9e')

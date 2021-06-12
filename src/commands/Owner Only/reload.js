@@ -37,7 +37,7 @@ module.exports = class Reload extends Command {
         `<a:RedTick:760514410115498025> Error Reloading ${things.id}`,
         `\`\`\`js\n${err}\`\`\``
       );
-      await message.channel.send(embed);
+      await message.util.send(embed);
     }
   }
 };

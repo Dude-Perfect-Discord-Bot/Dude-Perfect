@@ -32,11 +32,11 @@ class DeleteChannel extends Command {
       const channel = message.guild.channels.cache.get(ch);
       channel.delete();
 
-      await message.channel.send(
+      await message.util.send(
         `<:check:753484699237613630> Channel has been successfully deleted by **${message.author.tag}**.`
       );
     } catch (err) {
-      message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+      message.util.send(`<a:RedTick:760514410115498025> **${err}**`);
     }
   }
 }

@@ -24,7 +24,7 @@ class Dog extends Command {
       .then((response) => response.json())
       .then((body) => body.data);
     const selected = data[Math.floor(Math.random() * data.length)];
-    return message.channel.send(
+    return message.util.send(
       new MessageEmbed()
         .setTitle(`Bow 🐶`)
         .setColor('#00ff9e')

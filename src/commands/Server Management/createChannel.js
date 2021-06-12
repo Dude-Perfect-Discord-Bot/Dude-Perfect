@@ -39,11 +39,11 @@ class CreateChannel extends Command {
   async exec(message, { chtype, name }) {
     try {
       await message.guild.channels.create(name, { type: chtype });
-      return message.channel.send(
+      return message.util.send(
         `<:check:753484699237613630> **${name}** has been successfully created by **${message.author.tag}**.`
       );
     } catch (err) {
-      return message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+      return message.util.send(`<a:RedTick:760514410115498025> **${err}**`);
     }
   }
 }

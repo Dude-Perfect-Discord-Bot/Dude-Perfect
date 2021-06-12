@@ -27,7 +27,7 @@ class Figlet extends Command {
   }
 
   async exec(message, { text }) {
-    message.channel.send(await figlet(text), { code: true });
+    message.util.send(await figlet(text), { code: true });
   }
 }
 

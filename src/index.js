@@ -33,7 +33,7 @@ class DudePerfectClient extends AkairoClient {
       blockClient: true,
       allowMention: true,
       handleEdits: true,
-      defaultCooldown: 500,
+      defaultCooldown: 5000,
       commandUtil: true,
       ignoreCooldown: [
         '259008949427109891',

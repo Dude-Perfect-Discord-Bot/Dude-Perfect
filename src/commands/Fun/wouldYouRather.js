@@ -37,7 +37,7 @@ class WouldYouRather extends Command {
 
     const answer = ans[Math.floor(Math.random() * ans.length)];
 
-    message.channel.send(answer);
+    message.util.send(answer);
   }
 }
 

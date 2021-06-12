@@ -27,15 +27,15 @@ class Slowmode extends Command {
   async exec(message, { time }) {
     try {
       await message.channel.setRateLimitPerUser(time);
-      return message.channel.send(
+      return message.util.send(
         `<:check:753484699237613630> **Slowmode ${
           time === 0
             ? 'has been disabled!**'
-            : `has been set for ${formatDuration(time * 1000)}**`
+            : `has been set for ${formatDuration(time * 1000)}.**`
         }`
       );
     } catch (err) {
-      return message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+      return message.util.send(`<a:RedTick:760514410115498025> **${err}**`);
     }
   }
 }

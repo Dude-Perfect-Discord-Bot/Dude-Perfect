@@ -14,7 +14,7 @@ class Uptime extends Command {
   }
 
   async exec(message) {
-    message.channel.send(
+    message.util.send(
       `My current **uptime** is \`${ms(this.client.uptime, { long: true })}\`.`
     );
   }

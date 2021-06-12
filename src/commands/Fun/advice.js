@@ -22,7 +22,7 @@ class Advice extends Command {
           return message.reply(', an api error occurred.');
         }
         const advice = JSON.parse(res.text);
-        return message.channel.send(`👉  **${advice.slip.advice}**`);
+        return message.util.send(`👉  **${advice.slip.advice}**`);
       } else {
         return console.error(
           `REST call failed: ${err}, status code: ${res.status}`

@@ -27,7 +27,7 @@ class Meme extends Command {
           `${this.client.user.username} is made with ❤️`,
           `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
         );
-        message.channel.send(embed);
+        message.util.send(embed);
       })
       .catch(console.error);
   }

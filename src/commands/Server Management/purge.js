@@ -59,7 +59,7 @@ class Purge extends Command {
         });
       })
       .catch((err) => {
-        message.channel.send(`<a:RedTick:760514410115498025> **${err}**`);
+        message.util.send(`<a:RedTick:760514410115498025> **${err}**`);
       });
   }
 }

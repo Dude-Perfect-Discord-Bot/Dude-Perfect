@@ -35,7 +35,7 @@ class Enlarge extends Command {
 
   exec(message, { emoji }) {
     emoji.fetchAuthor().then(() => {
-      message.channel.send(`${emoji.url}`);
+      message.util.send(`${emoji.url}`);
     });
   }
 }
