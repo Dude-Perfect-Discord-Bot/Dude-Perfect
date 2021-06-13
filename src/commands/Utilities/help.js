@@ -1,6 +1,7 @@
+const { Argument, Category, Command } = require('discord-akairo');
 const { stripIndents } = require('common-tags');
-const { Command } = require('discord-akairo');
 const { MessageEmbed } = require('discord.js');
+const { normalizePermFlag } = require('../../utility/normalizePermFlag');
 
 class HelpCommand extends Command {
   constructor() {
@@ -8,8 +9,10 @@ class HelpCommand extends Command {
       aliases: ['help', 'halp'],
       args: [
         {
-          id: 'command',
-          type: 'commandAlias',
+          id: 'query',
+          type: Argument.union('command', 'commandAlias', (__, pharse) => {
+            return this.handler.findCategory(pharse) ?? null;
+          }),
           default: null,
         },
       ],
@@ -22,35 +25,58 @@ class HelpCommand extends Command {
     });
   }
 
-  exec(message, { command }) {
+  exec(message, { query }) {
     const { prefix } = this.handler;
-    const embed = new MessageEmbed().setColor('#00ff9e');
+    const embed = new MessageEmbed()
+      .setColor('#00ff9e')
+      .setURL('https://discord.gg/ZzbZpdw');
+    const isOwner = this.client.isOwner(message.author);
 
-    if (command) {
+    if (query instanceof Command) {
+      if (query.aliases.length > 1) {
+        embed.addField('❯ Aliases', `\`${query.aliases.join('`, `')}\``);
+      }
       embed
-        .setColor('#00ff9e')
-        .addField(
-          '❯ Usage',
-          `\`${command.aliases[0]} ${
-            command.description.usage ? command.description.usage : ''
-          }\``
+        .setTitle(
+          `${this.capitalizeFirstLetter(query.aliases[0])} Command Help`
         )
+        .addField('❯ Category', `\`${query.category.id}\``)
         .addField(
           '❯ Description',
-          command.description.content ?? 'No Description provided'
-        );
+          `\`${query.description.content}\`` ?? '`No Description provided`'
+        )
+        .addField(
+          '❯ Usage',
+          `\`${prefix}${query.aliases[0]} ${
+            query.description.usage ? query.description.usage.trim() : ''
+          }\``
+        )
 
-      if (command.aliases.length > 1) {
-        embed.addField('❯ Aliases', `\`${command.aliases.join('`, `')}\``);
-      }
-      if (command.description.examples && command.description.examples.length) {
+        .addField(
+          '❯ Permissions',
+          `\`${normalizePermFlag(
+            ['SEND_MESSAGES'].concat(query.userPermissions ?? [])
+          ).join('`, `')}\``
+        );
+      if (query.description.examples?.length) {
         embed.addField(
           '❯ Examples',
-          `\`${command.aliases[0]} ${command.description.examples.join(
-            `\`\n\`${command.aliases[0]} `
+          `\`${prefix}${query.aliases[0]} ${query.description.examples.join(
+            `\`\n\`${query.aliases[0]} `
           )}\``
         );
       }
+    } else if (query instanceof Category) {
+      const category = this.handler.categories.get(query.id);
+      const commands = [...category.values()].filter((cmd) => {
+        return isOwner ? true : !cmd.ownerOnly;
+      });
+      embed
+        .setTitle(`${this.capitalizeFirstLetter(category.id)} Commands`)
+        .setDescription(
+          `\`${commands.map((cmd) => cmd.aliases[0]).join('`, `')}\``
+        )
+        .setFooter(`${commands.length} Commands`);
     } else {
       embed
         .setAuthor(
@@ -68,25 +94,38 @@ class HelpCommand extends Command {
         .setFooter(
           `${this.client.user.username} is made with ❤️`,
           `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
-        );
-
-      for (const category of this.handler.categories.values()) {
-        embed.addField(
-          `❯ ${category.id.replace(/(\b\w)/gi, (lc) => lc.toUpperCase())} - ${
-            category.size
-          }`,
-          `${category
-            .filter((cmd) => cmd.aliases.length > 0)
-            .map((cmd) => `\`${cmd.aliases[0]}\``)
-            .join(', ')}`
-        );
-      }
-      embed.addField(`❯ Check Out`, [
-        ` [**Wiki**](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/wiki) • [**Invite**](http://bit.ly/dpdb_xynox) • [**Support**](https://discord.gg/ZzbZpdw) • [**GitHub**](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect) • [**Donate**](https://www.patreon.com/arindamz)`,
-      ]);
+        )
+        .addFields(this._mapCommands(isOwner))
+        .addField(`❯ Check Out`, [
+          ` [**Wiki**](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/wiki) • [**Invite**](http://bit.ly/dpdb_xynox) • [**Support**](https://discord.gg/ZzbZpdw) • [**GitHub**](https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect) • [**Donate**](https://www.patreon.com/arindamz)`,
+        ]);
     }
 
     return message.util.send(embed);
+  }
+
+  _mapCommands(isOwner = false) {
+    const entries = {};
+
+    for (const [category, categoryCommands] of this.handler.categories) {
+      const cmds = [...categoryCommands.values()];
+      entries[category] = cmds.filter((cmd) =>
+        !isOwner ? !cmd.ownerOnly : true
+      );
+      if (entries[category].length <= 0) delete entries[category];
+    }
+
+    return Object.entries(entries).map(([cat, commands]) => ({
+      name: `${this.capitalizeFirstLetter(cat)} Commands \`[${
+        commands.length
+      }]\``,
+      value: `\`${commands.join('`, `')}\``,
+      inline: false,
+    }));
+  }
+
+  capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 }
 

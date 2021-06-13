@@ -1,5 +1,6 @@
 const { Command } = require('discord-akairo');
 const { MessageEmbed } = require('discord.js');
+const { normalizePermFlag } = require('../../utility/normalizePermFlag');
 
 module.exports = class ViewPerm extends Command {
   constructor() {
@@ -22,9 +23,9 @@ module.exports = class ViewPerm extends Command {
   }
 
   exec(message, { member }) {
-    const permissions = this.normalizePermFlag(
-      member.permissions.toArray()
-    ).map((perm) => `\`${perm}\``);
+    const permissions = normalizePermFlag(member.permissions.toArray()).map(
+      (perm) => `\`${perm}\``
+    );
 
     const embed = new MessageEmbed()
       .setAuthor(
@@ -43,15 +44,5 @@ module.exports = class ViewPerm extends Command {
         `https://cdn.discordapp.com/emojis/805614116937007165.png?v=1`
       );
     message.util.send(embed);
-  }
-
-  normalizePermFlag(perms) {
-    return perms.map((perm) =>
-      perm
-        .toLowerCase()
-        .replace(/(^|"|_)(\S)/g, (str) => str.toUpperCase())
-        .replace(/_/g, ' ')
-        .replace(/Use Vad/g, 'Use Voice Acitvity')
-    );
   }
 };
