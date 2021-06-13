@@ -9,7 +9,7 @@ class EvalCommand extends Command {
       ownerOnly: true,
       quoted: false,
       channel: 'guild',
-      category: 'Bot Owner Only',
+      category: 'Owner',
       args: [
         {
           id: 'code',

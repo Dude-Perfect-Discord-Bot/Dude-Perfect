@@ -37,7 +37,7 @@ class HelpCommand extends Command {
         )
         .addField(
           '❯ Description',
-          command.description.content || 'No Description provided'
+          command.description.content ?? 'No Description provided'
         );
 
       if (command.aliases.length > 1) {

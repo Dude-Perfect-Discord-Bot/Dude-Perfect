@@ -15,7 +15,7 @@ module.exports = class Reload extends Command {
         content: 'Reload a command/listener/inhibitor',
         usage: '<Command | Listener | Inhibitor>',
       },
-      category: 'Bot Owner Only',
+      category: 'Owner',
       args: [
         {
           id: 'things',
