@@ -6,10 +6,18 @@
   "repository": "https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect",
   "author": "workforxynox@gmail.com",
   "license": "Apache-2.0",
+  "engines": {
+    "node": ">=14.x.x"
+  },
+  "scripts": {
+    "test": "eslint src .",
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "@anishshobith/deeptype": "^1.1.0",
     "canvas": "^2.8.0",
     "canvas-constructor": "^4.1.0",
+    "colorette": "^1.2.2",
     "common-tags": "^1.8.0",
     "discord-akairo": "^8.1.0",
     "discord.js": "^12.5.3",
@@ -28,5 +36,24 @@
     "topgg-autoposter": "^2.0.0",
     "twemoji-parser": "^13.0.0",
     "util": "^0.12.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-tesseract": "^0.2.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "tesseract",
+      "tesseract/prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "no-process-env": "off"
+    }
   }
 }
