@@ -40,11 +40,11 @@ class HelpCommand extends Command {
         .setTitle(
           `${this.capitalizeFirstLetter(query.aliases[0])} Command Help`
         )
-        .addField('❯ Category', `\`${query.category.id}\``)
         .addField(
           '❯ Description',
           `\`${query.description.content}\`` ?? '`No Description provided`'
         )
+        .addField('❯ Category', `\`${query.category.id}\``)
         .addField(
           '❯ Usage',
           `\`${prefix}${query.aliases[0]} ${
