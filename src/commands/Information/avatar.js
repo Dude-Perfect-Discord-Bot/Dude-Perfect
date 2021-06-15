@@ -24,10 +24,6 @@ class Avatar extends Command {
   }
 
   async exec(message, args) {
-    const msg = await message.util.send(
-      '<a:setting:754636981459353701> Generating avatar...'
-    );
-
     const { member } = args;
 
     const embed = new MessageEmbed()
@@ -45,8 +41,6 @@ class Avatar extends Command {
       );
 
     message.util.send(embed);
-
-    msg.delete();
   }
 }
 
