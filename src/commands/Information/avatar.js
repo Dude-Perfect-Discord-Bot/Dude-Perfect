@@ -24,7 +24,6 @@ class Avatar extends Command {
   }
 
   async exec(message, args) {
-
     const { member } = args;
 
     const embed = new MessageEmbed()
