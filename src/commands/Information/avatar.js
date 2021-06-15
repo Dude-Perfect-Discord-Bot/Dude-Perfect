@@ -45,8 +45,6 @@ class Avatar extends Command {
       );
 
     message.util.send(embed);
-
-    msg.delete();
   }
 }
 
