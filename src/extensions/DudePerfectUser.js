@@ -22,9 +22,11 @@ const DEPRECATED = ['DISCORD_PARTNER', 'VERIFIED_DEVELOPER'];
 class DudePerfectUser extends Structures.get('User') {
   displayFlags() {
     const badges = this.flags
-      .toArray()
-      .filter((flag) => !DEPRECATED.includes(flag))
-      .map((flag) => FLAGS[flag]);
+      ? this.flags
+          .toArray()
+          .filter((flag) => !DEPRECATED.includes(flag))
+          .map((flag) => FLAGS[flag])
+      : [];
 
     if (
       this.avatarURL() &&
