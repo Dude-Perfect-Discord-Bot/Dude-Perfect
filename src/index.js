@@ -9,6 +9,8 @@ const { AutoPoster } = require('topgg-autoposter');
 const { config } = require('dotenv');
 const { join } = require('path');
 
+require('./extensions/DudePerfectUser');
+
 config();
 class DudePerfectClient extends AkairoClient {
   constructor() {
