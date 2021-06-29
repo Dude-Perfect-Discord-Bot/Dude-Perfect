@@ -21,14 +21,14 @@ class DudePerfectClient extends AkairoClient {
       disableMentions: 'everyone',
     });
 
-    // Stats
+    // Statistical Data recorded with the help other 3rd Party srevices.
     this.statCord = new StatcordClient({
       client: this,
       key: process.env.STATCORD_KEY,
     });
     this.dbl = new AutoPoster(process.env.TOP_GG_TOKEN, this);
 
-    // Handlers . . .
+    // Handler configuration . . .
     this.commandHandler = new CommandHandler(this, {
       prefix: process.env.PREFIX,
       blockBots: true,
@@ -37,7 +37,7 @@ class DudePerfectClient extends AkairoClient {
       handleEdits: true,
       defaultCooldown: 5000,
       commandUtil: true,
-      // Xynox, Piyush & Anish
+      // Xynox, Piyush & Anish omly.
       ignoreCooldown: [
         '594853883742912512',
         '365644930556755969',
