@@ -37,10 +37,11 @@ class DudePerfectClient extends AkairoClient {
       handleEdits: true,
       defaultCooldown: 5000,
       commandUtil: true,
+      // Xynox, Piyush & Anish
       ignoreCooldown: [
+        '594853883742912512',
+        '365644930556755969',
         '259008949427109891',
-        '430236084744749058',
-        '371600898822111234',
         '365644930556755969',
       ],
       directory: join(__dirname, 'commands'),
