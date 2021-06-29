@@ -39,17 +39,17 @@ class VoiceKick extends Command {
       message.reply(
         '<a:RedTick:760514410115498025> **User needs to connected in a voice channel to be disconnected.**'
       );
-
-    member.voice
-      .kick(reason)
-      .then((mem) => {
-        return message.util.send(
-          `<:check:753484699237613630> **${mem.user.tag}** has successfully disconnected by **${message.author.tag}**.`
-        );
-      })
-      .catch((err) => {
-        return message.util.send(`<a:RedTick:760514410115498025> **${err}**`);
-      });
+    else
+      member.voice
+        .kick(reason)
+        .then((mem) => {
+          return message.util.send(
+            `<:check:753484699237613630> **${mem.user.tag}** has successfully disconnected by **${message.author.tag}**.`
+          );
+        })
+        .catch((err) => {
+          return message.util.send(`<a:RedTick:760514410115498025> **${err}**`);
+        });
   }
 }
 
