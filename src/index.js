@@ -42,7 +42,6 @@ class DudePerfectClient extends AkairoClient {
         '594853883742912512',
         '365644930556755969',
         '259008949427109891',
-        '365644930556755969',
       ],
       directory: join(__dirname, 'commands'),
     });
