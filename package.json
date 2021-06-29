@@ -1,6 +1,6 @@
 {
   "name": "dude-perfect",
-  "version": "2.3.12",
+  "version": "2.3",
   "description": "Dude Perfect is a bot that can do most of the things that everything you require for making a better and better Discord Server",
   "main": "src/index.js",
   "repository": "https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect",
