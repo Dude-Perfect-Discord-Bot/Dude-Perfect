@@ -10,8 +10,9 @@
 
 ## Reporting a Vulnerability
 
-If you find a vulnerability in Skyra's codebase please report it immediately.
-If you deem the vulnerability exploitable by Dude Perfect's users in any shape or form please join [**Discord**](https://discord.gg/ZzbZpdw) and then DM Xynox(Arindamz#0117).
+If you find a vulnerability in Dude Perfect's codebase please report it immediately.
+If you deem the vulnerability exploitable by Dude Perfect's users in any shape or form please join [**Discord**](https://discord.gg/ZzbZpdw) and then DM/PM Xynox(Arindam).
+
 In case the vulnerability is not exploitable by Dude Perfect's users you are free to either:
 
 -   Use the GitHub issue tracker to report the issue
