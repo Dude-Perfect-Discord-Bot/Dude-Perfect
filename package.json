@@ -5,5 +5,13 @@
   "main": "src/index.js",
   "repository": "https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect",
   "author": "workforxynox@gmail.com",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@sapphire/framework": "^1.0.2",
+    "@sapphire/plugin-api": "^2.2.0",
+    "@sapphire/plugin-logger": "^1.0.13",
+    "@skyra/editable-commands": "^2.1.0",
+    "colorette": "^1.3.0",
+    "util": "^0.12.4"
+  }
 }
