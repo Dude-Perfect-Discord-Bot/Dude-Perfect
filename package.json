@@ -16,5 +16,7 @@
   },
   "devDependencies": {
     "@sapphire/prettier-config": "^1.2.0-next.c4f992f5.0"
-  }
+  },
+  	"prettier": "@sapphire/prettier-config"
+
 }
