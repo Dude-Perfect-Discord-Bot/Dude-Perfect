@@ -81,7 +81,7 @@ class HelpCommand extends Command {
       embed
         .setAuthor(
           `Help Interface`,
-          `${message.guild.iconURL({ dynamic: true })}`
+          `${message.guild ? message.guild.iconURL({ dynamic: true }) : "https://i.imgur.com/ZOKp8LH.png"}`
         )
         .setThumbnail(`https://i.imgur.com/OpNjeck.png`)
         .setDescription(
