@@ -33,7 +33,7 @@
   "url": "https://github.com/Dude-Perfect-Discord-Bot/Dude-Perfect/issues"
  },
  "dependencies": {
-  "@sapphire/framework": "^2.0.0-next.9f81b7bb.0",
+  "@sapphire/framework": "^2.0.0-next.71c18830.0",
   "@sapphire/plugin-api": "^3.0.0-next.3bd3e99.0",
   "@sapphire/plugin-editable-commands": "^0.1.0-next.9af3e85.0",
   "@sapphire/plugin-logger": "^1.0.14-next.3bd3e99.0",

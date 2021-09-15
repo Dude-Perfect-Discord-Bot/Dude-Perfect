@@ -39,7 +39,7 @@
   dependencies:
     twemoji-parser "^13.1.0"
 
-"@sapphire/discord-utilities@^2.2.0-next.c2ef7d8a.0":
+"@sapphire/discord-utilities@^2.2.0-next.9b57a291.0":
   version "2.2.0-pr-160.676f855.0"
   resolved "https://registry.yarnpkg.com/@sapphire/discord-utilities/-/discord-utilities-2.2.0-pr-160.676f855.0.tgz#5823cc9dd8c6bd58d9661799f622121f256b0759"
   integrity sha512-GffUWgLDI3DClwQ4babs17VdvWIZQb0qkTCDhUnOjn5QKLq+li+oaQ1dRreZD+yFXsyQrmS6nVHAr+HApXlotw==
@@ -47,31 +47,31 @@
     twemoji-parser "^13.1.0"
 
 "@sapphire/discord.js-utilities@next":
-  version "3.0.0-next.c2ef7d8a.0"
-  resolved "https://registry.yarnpkg.com/@sapphire/discord.js-utilities/-/discord.js-utilities-3.0.0-next.c2ef7d8a.0.tgz#19ee25753a28963d2c853d2f8e8f819ea37d943c"
-  integrity sha512-AzGJ7xQGbTbqyH2OAltIxeZEz/4bEuO15dxz8w3yNI9rW06KX9LVP5FSH97ttn7yxzjVadKADxlngHLFh7Mcpg==
+  version "3.0.0-next.9b57a291.0"
+  resolved "https://registry.yarnpkg.com/@sapphire/discord.js-utilities/-/discord.js-utilities-3.0.0-next.9b57a291.0.tgz#7d0b782a36f5037d978910ef671179d682cdb45c"
+  integrity sha512-fq7WkIYyYSNI3hcHbyDXNcEAFX6ySh73i/M+0QunAJvjaeIRHnB196JMPTsUf8kdqsuvCb2b5Euv0wgL575s6Q==
   dependencies:
-    "@sapphire/discord-utilities" "^2.2.0-next.c2ef7d8a.0"
-    "@sapphire/time-utilities" "^1.4.0-next.c2ef7d8a.0"
-    "@sapphire/utilities" "^2.1.0-next.c2ef7d8a.0"
+    "@sapphire/discord-utilities" "^2.2.0-next.9b57a291.0"
+    "@sapphire/time-utilities" "^1.4.0-next.9b57a291.0"
+    "@sapphire/utilities" "^2.1.0-next.9b57a291.0"
 
-"@sapphire/framework@^2.0.0-next.9f81b7bb.0":
-  version "2.0.0-pr-244.fc651b10.0"
-  resolved "https://registry.yarnpkg.com/@sapphire/framework/-/framework-2.0.0-pr-244.fc651b10.0.tgz#5527704cef5911ea73059d1ae9698209735d8e01"
-  integrity sha512-eWDY0cvV+yeUuzxp1pUTiaEw+fbnkIimzyZtd8yw2UgzqCp9ti5E+0tGKcAYaQPIUqmbGCbm90MaRJOdSwvjLw==
+"@sapphire/framework@^2.0.0-next.71c18830.0":
+  version "2.0.0-next.71c18830.0"
+  resolved "https://registry.yarnpkg.com/@sapphire/framework/-/framework-2.0.0-next.71c18830.0.tgz#d3a80675f2b27d82bd0ce8d88cdfcd5b718483f2"
+  integrity sha512-FytfEmMXfTHnNZ734GNSxyTzKJZIDMRO2TsnaP4JQe7yOG0IrhzwKOSHQa1hjYGoRxH/0wS8WqXE5sOs0pMEoA==
   dependencies:
     "@sapphire/discord-utilities" "^2.1.5"
     "@sapphire/discord.js-utilities" next
-    "@sapphire/pieces" "^2.1.0"
+    "@sapphire/pieces" "^3.0.0"
     "@sapphire/ratelimits" "^2.0.1"
     "@sapphire/utilities" "^2.0.1"
     lexure "^0.17.0"
-    tslib "^2.3.0"
+    tslib "^2.3.1"
 
-"@sapphire/pieces@^2.1.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@sapphire/pieces/-/pieces-2.2.0.tgz#9e45fe1462996d35d513dbafeab713aa5eb4adae"
-  integrity sha512-VhUMUshM7IvKQ/JXJBUUZYO28fHQQ4+2mxHf2q+Rrm6ZOJAOXrYuplc/JBJ7sHb+Icr8WFhUazlarjKbEjErZw==
+"@sapphire/pieces@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@sapphire/pieces/-/pieces-3.0.0.tgz#968878dee0c680d00dc29202a4fc15f1daea2b5d"
+  integrity sha512-Up/ajwm88jLHmG/AKmiEAyBcXlBEV2p96KXYIjoJVX2/bCr+zK+lDWDPE2cg5dJPfU6CABEdMqV5h/wdQxgf9A==
   dependencies:
     "@discordjs/collection" "^0.2.1"
     "@sapphire/utilities" "^2.0.1"
@@ -127,7 +127,7 @@
   dependencies:
     "@sapphire/utilities" "^2.0.1"
 
-"@sapphire/time-utilities@^1.4.0-next.c2ef7d8a.0":
+"@sapphire/time-utilities@^1.4.0-next.9b57a291.0":
   version "1.4.0-pr-160.676f855.0"
   resolved "https://registry.yarnpkg.com/@sapphire/time-utilities/-/time-utilities-1.4.0-pr-160.676f855.0.tgz#50787f31d3b1be86ebee71d55089d160dc1daf94"
   integrity sha512-qjvsSdDl/LFH4sVC51FzWsENyYzQcmTlxC4XabODZFkdMNaCfqahtf8h8Gf/bVmFG7jSbzMJHXIn7r9WE32bTw==
@@ -139,7 +139,7 @@
   resolved "https://registry.yarnpkg.com/@sapphire/utilities/-/utilities-2.0.1.tgz#c436c5b2b72679c89a40abe46d2f9301d03e63e2"
   integrity sha512-KgJsgQ1cnfVKqscrMX4GH29mIVhVQkF8kSTIRCB+hgCCRfIvUU5peE4g/cegnesPS5eMiQqV+NWk7cNwhjextQ==
 
-"@sapphire/utilities@^2.1.0-next.c2ef7d8a.0":
+"@sapphire/utilities@^2.1.0-next.9b57a291.0":
   version "2.1.0-pr-159.fae7a606.0"
   resolved "https://registry.yarnpkg.com/@sapphire/utilities/-/utilities-2.1.0-pr-159.fae7a606.0.tgz#ceba7a08bc96ed18b2636e5dcad57f13e394e609"
   integrity sha512-tksK8j0/5xhmEfPQ5NRlm/aTyWMxq6HhBOO1O1hiv2fbiBUsG4pp+Y/xZV4zVAB9SdpKiwthqQSWt17fcZ4lOQ==
