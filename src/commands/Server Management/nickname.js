@@ -46,8 +46,8 @@ class Nickname extends Command {
     member.setNickname(nick ?? null).then((mem) => {
       return message.util.send(
         mem.nickname
-          ? `<:check:753484699237613630> Set nickname to **${mem.nickname}**`
-          : `<:check:753484699237613630> Set back to username **${mem.user.username}**`
+          ? `<:check:753484699237613630> Set ${mem} nickname to **${mem.nickname}**.`
+          : `<:check:753484699237613630> Resested **${mem}'s** nickname to username.`
       );
     });
   }
