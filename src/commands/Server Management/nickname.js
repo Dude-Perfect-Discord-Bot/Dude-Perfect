@@ -38,7 +38,7 @@ class Nickname extends Command {
       comparePositions(message.guild.me.roles.highest, member.roles.highest) <=
       0
     ) {
-      message.reply(
+      return message.reply(
         `<a:RedTick:760514410115498025> **${member}'s role is above or equal to my role so i can't change their nickname.**`
       );
     }
@@ -46,7 +46,7 @@ class Nickname extends Command {
       comparePositions(message.member.roles.highest, member.roles.highest) <=
       0
     ) {
-      message.reply(
+      return message.reply(
         `<a:RedTick:760514410115498025> **${member}'s role is above or equal to your role, so i can't change their nickname.**`
       );
     }
