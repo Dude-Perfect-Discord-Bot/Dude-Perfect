@@ -39,7 +39,7 @@ class Nickname extends Command {
       0
     ) {
       message.reply(
-        `<a:RedTick:760514410115498025> **${mem}'s role is above or equal to my role so i can't change their nickname.**`
+        `<a:RedTick:760514410115498025> **${member}'s role is above or equal to my role so i can't change their nickname.**`
       );
     }
     if (
@@ -47,7 +47,7 @@ class Nickname extends Command {
       0
     ) {
       message.reply(
-        `<a:RedTick:760514410115498025> **${mem}'s role is above or equal to your role, so i can't change their nickname.**`
+        `<a:RedTick:760514410115498025> **${member}'s role is above or equal to your role, so i can't change their nickname.**`
       );
     }
 
